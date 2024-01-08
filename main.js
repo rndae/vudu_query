@@ -7,9 +7,9 @@ const params = {
   _type: 'contentSearch',
   contentEncoding: 'gzip',
   dimensionality: 'any',
+  followup: 'usefulStreamableOffers',
   format: 'application/json',
-  responseSubset: 'micro',
-  sortBy: '-streamScore',
+  //sortBy: '-streamScore',
   count: 100,
 };
 
@@ -31,7 +31,7 @@ const getURL = (media, offset) => {
 
   const queryString = Object.keys(params)
     .map((key) => {
-      // If the parameter value is an array, joins with commas, but changing to &key= would be better
+      // If the parameter value is an array, joins with commas, but this needs to be corrected because join with &key= is the way it works for this api
       const value = Array.isArray(params[key])
         ? params[key].join(',')
         : params[key];
@@ -58,18 +58,100 @@ const getData = async (url) => {
   }
 };
 
-// Parse the response data and extract the title and contentId fields
-const parseData = (data) => {
+// Parse the response and extract the content fields
+const parseMovieData = (data) => {
   if (!data || !data.content) {
     throw new Error('Invalid data. It must have the content property.');
   }
 
   return data.content.map((item) => {
+    const releaseDate = item.releaseTime?.[0];
+    const rentalCostSD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'sd')?.[0]?.offers[0]?.offer?.filter((offer) => offer.offerType[0] === 'ptr')?.[0]?.price?.[0];
+    const rentalCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'ptr')?.[0]?.price?.[0];
+    const purchaseCostSD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'sd')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'pto')?.[0]?.price?.[0];
+    const purchaseCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'pto')?.[0]?.price?.[0];
+
+    // the following could be useful because sometimes the best quality available is sd
+    //const bestQuality = item.bestDashVideoQuality[0];
+
     return {
+      content_id: item.contentId[0],
       title: item.title[0],
-      contentId: item.contentId[0],
+      release_date: releaseDate,
+      rental_cost_sd: rentalCostSD,
+      rental_cost_hd: rentalCostHD,
+      purchase_cost_sd: purchaseCostSD,
+      purchase_cost_hd: purchaseCostHD,
     };
   });
+};
+
+// Parse the response data and extract the series data fields
+const parseSeriesData = (data) => {
+  if (!data || !data.content) {
+    throw new Error('Invalid data. It must have the content property.');
+  }
+
+  return data.content.map((item) => {
+    const contentId = item.contentId[0];
+    const title = item.title[0];
+    const releaseDate = item.releaseTime[0];
+
+    const seasons = item.contentVariants[0].contentVariant[0].seasons?.[0].season.map((season) => {
+      const seasonId = season.seasonId[0];
+      const seasonNumber = season.seasonId[0].split('-')[1];
+
+      const episodes = season.episodes[0].episode.map((episode) => {
+        const episodeId = episode.episodeId[0];
+        const episodeNumber = episode.episodeId[0].split('-')[2];
+        const episodeTitle = episode.title[0];
+        const episodeReleaseDate = episode.releaseTime[0];
+
+        const rentalCostSD = episode.offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr' && offer.videoQuality[0] === 'sd')[0].price[0];
+        const rentalCostHD = episode.offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr' && offer.videoQuality[0] === 'hdx')[0].price[0];
+        const purchaseCostSD = episode.offers[0].offer.filter((offer) => offer.offerType[0] === 'pto' && offer.videoQuality[0] === 'sd')[0].price[0];
+        const purchaseCostHD = episode.offers[0].offer.filter((offer) => offer.offerType[0] === 'pto' && offer.videoQuality[0] === 'hdx')[0].price[0];
+
+        return {
+          episode_id: episodeId,
+          episode_number: episodeNumber,
+          episode_title: episodeTitle,
+          episode_release_date: episodeReleaseDate,
+          rental_cost_sd: rentalCostSD,
+          rental_cost_hd: rentalCostHD,
+          purchase_cost_sd: purchaseCostSD,
+          purchase_cost_hd: purchaseCostHD
+        };
+      });
+
+      return {
+        season_id: seasonId,
+        season_number: seasonNumber,
+        episodes
+      };
+    });
+
+    return {
+      content_id: contentId,
+      title,
+      release_date: releaseDate,
+      seasons
+    };
+  });
+};
+
+// Higher-order function that takes a media parameter and a data parameter
+// and returns the result of calling either parseMovieData or parseSeriesData on the data
+const parseDataByMedia = (media, data) => {
+  let parseFunction;
+  if (media === 'movies') {
+    parseFunction = parseMovieData;
+  } else if (media === 'series') {
+    parseFunction = parseSeriesData;
+  } else {
+    throw new Error('Invalid media parameter. It must be either movies or series.');
+  }
+  return parseFunction(data);
 };
 
 const saveData = (data, outputLocation) => {
@@ -119,8 +201,9 @@ const init = async (media, outputLocation) => {
   }
 
   // Offset value to 0, because it works by "scrolling"
-  // In 1/4/2024, greatest offset was 41700 for 100 increments
-  let offset = 0;
+  // In 1/4/2024, for movies: greatest offset was 41700 for 100 increments
+  // for series: greatest offset was 16872. The last three are after offset 16892 
+  let offset = 16892;
   let moreBelow = true;
   let results = [];
 
@@ -128,7 +211,7 @@ const init = async (media, outputLocation) => {
     const url = getURL(media, offset);
     console.log(url);
     const data = await getData(url);
-    const parsedData = parseData(data);
+    const parsedData = parseDataByMedia(media, data);
     results = results.concat(parsedData);
 
     if (data.moreBelow) {
@@ -143,7 +226,7 @@ const init = async (media, outputLocation) => {
   // Remove any duplicates
   results = results.filter(
     (item, index, array) =>
-      array.findIndex((other) => other.contentId === item.contentId) === index
+      array.findIndex((other) => other.content_id === item.content_id) === index
   );
 
   saveData(results, outputLocation);
