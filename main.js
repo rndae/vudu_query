@@ -3,7 +3,9 @@ const rateLimit = require('express-rate-limit');
 const fs = require('fs');
 
 const baseURL = 'https://apicache.vudu.com/api2/';
-const params = {
+
+//params need to be approached in a different way, this is a change that is critical to make
+var params = {
   _type: 'contentSearch',
   contentEncoding: 'gzip',
   dimensionality: 'any',
@@ -31,11 +33,10 @@ const getURL = (media, offset) => {
 
   const queryString = Object.keys(params)
     .map((key) => {
-      // If the parameter value is an array, joins with commas, but this needs to be corrected because join with &key= is the way it works for this api
       const value = Array.isArray(params[key])
-        ? params[key].join(',')
-        : params[key];
-      return `${encodeURIComponent(key)}=${encodeURIComponent(value)}`;
+        ? params[key].map((v) => `${v}`).join(`&${key}=`)
+        : encodeURIComponent(params[key]);
+      return `${encodeURIComponent(key)}=${value}`;
     })
     .join('&');
 
@@ -58,7 +59,68 @@ const getData = async (url) => {
   }
 };
 
-// Parse the response and extract the content fields
+const getSeasonsURL = (seriesId) => {
+  if (typeof seriesId !== 'string') {
+    throw new Error('Invalid seriesId parameter. It must be a string.');
+  }
+
+  params.type = ['season'];
+  params.superType = 'tv';
+  params.includePreOrders = true;
+  params.followup = ['episodeNumberInSeason', 'seasonNumber', 'usefulStreamableOffers'];
+  params.offset = 0;
+  params.seriesId = seriesId;
+
+  const queryString = Object.keys(params)
+    .map((key) => {
+      const value = Array.isArray(params[key])
+        ? params[key].map((v) => `${v}`).join(`&${key}=`)
+        : encodeURIComponent(params[key]);
+      return `${encodeURIComponent(key)}=${value}`;
+    })
+    .join('&');
+
+  return `${baseURL}?${queryString}`;
+};
+
+const getEpisodesURL = (seasonId) => {
+  if (typeof seasonId !== 'string') {
+    throw new Error('Invalid seasonId parameter. It must be a string.');
+  }
+
+  // params need to be approached in a different way, this is a change that is critical to make
+  /*const typeAux = params.type;
+  const superTypeAux = params.superType;
+  const seriesIdAux = params.seriesId;
+
+  delete(params.type);
+  delete(params.superType);
+  delete(params.seriesId);*/
+  params.includePreOrders = true;
+  params.followup = ['episodeNumberInSeason', 'seasonNumber', 'usefulStreamableOffers'];
+  params.offset = 0;
+  params.seasonId = seasonId;
+  params.sortBy = 'episodeNumberInSeason';
+
+  console.log(params);
+
+  const queryString = Object.keys(params)
+    .map((key) => {
+      const value = Array.isArray(params[key])
+        ? params[key].map((v) => `${v}`).join(`&${key}=`)
+        : encodeURIComponent(params[key]);
+      return `${encodeURIComponent(key)}=${(value)}`;
+    })
+    .join('&');
+
+    //params need to be approached in a different way, this is a change that is critical to make
+    /*params.type = typeAux;
+    params.superType = superTypeAux;
+    params.seriesId = seriesIdAux;*/
+
+  return `${baseURL}?${queryString}`;
+};
+
 const parseMovieData = (data) => {
   if (!data || !data.content) {
     throw new Error('Invalid data. It must have the content property.');
@@ -70,9 +132,6 @@ const parseMovieData = (data) => {
     const rentalCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'ptr')?.[0]?.price?.[0];
     const purchaseCostSD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'sd')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'pto')?.[0]?.price?.[0];
     const purchaseCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'pto')?.[0]?.price?.[0];
-
-    // the following could be useful because sometimes the best quality available is sd
-    //const bestQuality = item.bestDashVideoQuality[0];
 
     return {
       content_id: item.contentId[0],
@@ -86,7 +145,6 @@ const parseMovieData = (data) => {
   });
 };
 
-// Parse the response data and extract the series data fields
 const parseSeriesData = (data) => {
   if (!data || !data.content) {
     throw new Error('Invalid data. It must have the content property.');
@@ -94,48 +152,81 @@ const parseSeriesData = (data) => {
 
   return data.content.map((item) => {
     const contentId = item.contentId[0];
+    const seriesId = item.seriesId[0];
     const title = item.title[0];
-    const releaseDate = item.releaseTime[0];
-
-    const seasons = item.contentVariants[0].contentVariant[0].seasons?.[0].season.map((season) => {
-      const seasonId = season.seasonId[0];
-      const seasonNumber = season.seasonId[0].split('-')[1];
-
-      const episodes = season.episodes[0].episode.map((episode) => {
-        const episodeId = episode.episodeId[0];
-        const episodeNumber = episode.episodeId[0].split('-')[2];
-        const episodeTitle = episode.title[0];
-        const episodeReleaseDate = episode.releaseTime[0];
-
-        const rentalCostSD = episode.offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr' && offer.videoQuality[0] === 'sd')[0].price[0];
-        const rentalCostHD = episode.offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr' && offer.videoQuality[0] === 'hdx')[0].price[0];
-        const purchaseCostSD = episode.offers[0].offer.filter((offer) => offer.offerType[0] === 'pto' && offer.videoQuality[0] === 'sd')[0].price[0];
-        const purchaseCostHD = episode.offers[0].offer.filter((offer) => offer.offerType[0] === 'pto' && offer.videoQuality[0] === 'hdx')[0].price[0];
-
-        return {
-          episode_id: episodeId,
-          episode_number: episodeNumber,
-          episode_title: episodeTitle,
-          episode_release_date: episodeReleaseDate,
-          rental_cost_sd: rentalCostSD,
-          rental_cost_hd: rentalCostHD,
-          purchase_cost_sd: purchaseCostSD,
-          purchase_cost_hd: purchaseCostHD
-        };
-      });
-
-      return {
-        season_id: seasonId,
-        season_number: seasonNumber,
-        episodes
-      };
-    });
+    const releaseDate = item.releaseTime?.[0];
+    const rentalCostSD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'sd')?.[0]?.offers[0]?.offer?.filter((offer) => offer.offerType[0] === 'ptr')?.[0]?.price?.[0];
+    const rentalCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'ptr')?.[0]?.price?.[0];
+    const purchaseCostSD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'sd')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'pto')?.[0]?.price?.[0];
+    const purchaseCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'pto')?.[0]?.price?.[0];
 
     return {
       content_id: contentId,
+      series_id: seriesId,
       title,
       release_date: releaseDate,
-      seasons
+      rental_cost_sd: rentalCostSD,
+      rental_cost_hd: rentalCostHD,
+      purchase_cost_sd: purchaseCostSD,
+      purchase_cost_hd: purchaseCostHD,
+    };
+  });
+};
+
+const parseSeasonsData = (data) => {
+  if (!data || !data.content) {
+    throw new Error('Invalid data. It must have the content property.');
+  }
+
+  return data.content.map((item) => {
+    const seasonNumber = item.seasonNumber[0];
+    const seasonId = item.contentId[0];
+
+    const rentalCostSD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'sd')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr')[0]?.price?.[0];
+    const rentalCostHD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'hdx')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr')[0]?.price?.[0];
+    const purchaseCostSD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'sd')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'pto')[0]?.price?.[0];
+    const purchaseCostHD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'hdx')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'pto')[0]?.price?.[0];
+
+    return {
+      seasonNumber,
+      seasonId,
+      rentalCostSD,
+      rentalCostHD,
+      purchaseCostSD,
+      purchaseCostHD
+    };
+  });
+};
+
+// Define a function to parse the episodes data and extract the relevant fields
+const parseEpisodesData = (data) => {
+  if (!data || !data.content) {
+    throw new Error('Invalid data. It must have the episode property.');
+  }
+
+  return data.content.map((item) => {
+    const episodeId = item.contentId[0];
+    //const episodeNumber = episode.episodeId[0].split('-')[2];
+    const episodeNumber = item.episodeNumberInSeason[0];
+    const episodeTitle = item.title[0];
+    const episodeReleaseDate = item.releaseTime[0];
+    const tmsId = item.tmsId[0];
+
+    const rentalCostSD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'sd')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr')[0]?.price?.[0];
+    const rentalCostHD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'hdx')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr')[0]?.price?.[0];
+    const purchaseCostSD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'sd')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'pto')[0]?.price?.[0];
+    const purchaseCostHD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'hdx')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'pto')[0]?.price?.[0];
+
+    return {
+      episodeId,
+      episodeNumber,
+      episodeTitle,
+      episodeReleaseDate,
+      tmsId,
+      rentalCostSD,
+      rentalCostHD,
+      purchaseCostSD,
+      purchaseCostHD
     };
   });
 };
@@ -189,9 +280,7 @@ const rateLimiter = rateLimit({
 });
 
 // To do: handle payload parameter
-//const init = async (media, payload, outputLocation) => {
 const init = async (media, outputLocation) => {
-
   if (!media) {
     throw new Error('Invalid media parameter. It must be either movies or series.');
   }
@@ -223,15 +312,71 @@ const init = async (media, outputLocation) => {
     offset += params.count;
   }
 
-  // Remove any duplicates
   results = results.filter(
     (item, index, array) =>
       array.findIndex((other) => other.content_id === item.content_id) === index
   );
 
+  if (media === 'series') {
+    const seriesIds = new Set();
+
+    for (let i = 0; i < results.length; i++) {
+      const seriesId = results[i].series_id;
+
+      if (seriesIds.has(seriesId)) {
+        continue;
+      }
+
+      seriesIds.add(seriesId);
+      const seasons = [];
+      let seasonsOffset = 0;
+      let seasonsMoreBelow = true;
+
+      while (seasonsMoreBelow) {
+        const seasonsURL = getSeasonsURL(seriesId, seasonsOffset);
+        console.log("SEASONS URL: " + seasonsURL);
+        const seasonsData = await getData(seasonsURL);
+        const parsedSeasonsData = parseSeasonsData(seasonsData);
+        seasons.push(...parsedSeasonsData);
+
+        if (seasonsData.moreBelow) {
+          seasonsMoreBelow = seasonsData.moreBelow[0] === 'true';
+        } else {
+          seasonsMoreBelow = false;
+        }
+
+        seasonsOffset += params.count;
+      }
+
+      for (let j = 0; j < seasons.length; j++) {
+        const seasonId = seasons[j].seasonId;
+        const episodes = [];
+
+        let episodesOffset = 0;
+        let episodesMoreBelow = true;
+
+        while (episodesMoreBelow) {
+          const episodesURL = getEpisodesURL(seasonId, episodesOffset);
+          console.log("EPISODES URL: " + episodesURL);
+          const episodesData = await getData(episodesURL);
+          const parsedEpisodesData = parseEpisodesData(episodesData);
+          episodes.push(...parsedEpisodesData);
+          if (episodesData.moreBelow) {
+            episodesMoreBelow = episodesData.moreBelow[0] === 'true';
+          } else {
+            episodesMoreBelow = false;
+          }
+          episodesOffset += params.count;
+        }
+        seasons[j].episodes = episodes;
+      }
+      results[i].seasons = seasons;
+    }
+  }
+
   saveData(results, outputLocation);
   return results;
-};
+};          
 
 // Parses the command line arguments and calls the init function
 const main = async () => {

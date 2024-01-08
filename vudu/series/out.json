@@ -1,17 +1,34 @@
 [
   {
     "content_id": "410596",
+    "series_id": "410595",
     "title": "Zoo Vets: Season 1",
-    "release_date": "2009-01-01"
+    "release_date": "2009-01-01",
+    "purchase_cost_sd": "4.9900",
+    "purchase_cost_hd": "7.9900"
   },
   {
     "content_id": "926694",
+    "series_id": "926693",
     "title": "Zoofari: Volume 1",
-    "release_date": "2018-02-06"
+    "release_date": "2018-02-06",
+    "purchase_cost_sd": "14.9900",
+    "purchase_cost_hd": "19.9900"
   },
   {
     "content_id": "941453",
+    "series_id": "926693",
     "title": "Zoofari: Volume 2",
-    "release_date": "2018-04-07"
+    "release_date": "2018-04-07",
+    "purchase_cost_sd": "14.9900",
+    "purchase_cost_hd": "19.9900"
+  },
+  {
+    "content_id": "2860383",
+    "series_id": "1416365",
+    "title": "Celebrity IOU: Season 7",
+    "release_date": "2024-01-01",
+    "purchase_cost_sd": "13.9900",
+    "purchase_cost_hd": "14.9900"
   }
 ]
