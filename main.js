@@ -5,7 +5,7 @@ const fs = require('fs');
 const baseURL = 'https://apicache.vudu.com/api2/';
 
 //params need to be approached in a different way, this is a change that is critical to make
-var params = {
+const params = {
   _type: 'contentSearch',
   contentEncoding: 'gzip',
   dimensionality: 'any',
@@ -20,22 +20,24 @@ const getURL = (media, offset) => {
     throw new Error('Invalid media parameter. It must be either movies or series.');
   }
 
+  const paramsCopy = getParamsCopy();
+
   if (media === 'movies') {
-    params.type = ['program'];
-    params.superType = 'movies';
-    params.includePreOrders = true;
+    paramsCopy.type = ['program'];
+    paramsCopy.superType = 'movies';
+    paramsCopy.includePreOrders = true;
   } else {
-    params.type = ['season'];
-    params.superType = 'tv';
+    paramsCopy.type = ['season'];
+    paramsCopy.superType = 'tv';
   }
 
-  params.offset = offset;
+  paramsCopy.offset = offset;
 
-  const queryString = Object.keys(params)
+  const queryString = Object.keys(paramsCopy)
     .map((key) => {
-      const value = Array.isArray(params[key])
-        ? params[key].map((v) => `${v}`).join(`&${key}=`)
-        : encodeURIComponent(params[key]);
+      const value = Array.isArray(paramsCopy[key])
+        ? paramsCopy[key].map((v) => `${v}`).join(`&${key}=`)
+        : encodeURIComponent(paramsCopy[key]);
       return `${encodeURIComponent(key)}=${value}`;
     })
     .join('&');
@@ -59,7 +61,7 @@ const getData = async (url) => {
   }
 };
 
-const getSeasonsURL = (seriesId) => {
+/*const getSeasonsURL = (seriesId) => {
   if (typeof seriesId !== 'string') {
     throw new Error('Invalid seriesId parameter. It must be a string.');
   }
@@ -81,13 +83,14 @@ const getSeasonsURL = (seriesId) => {
     .join('&');
 
   return `${baseURL}?${queryString}`;
-};
+};*/
 
 const getEpisodesURL = (seasonId) => {
   if (typeof seasonId !== 'string') {
     throw new Error('Invalid seasonId parameter. It must be a string.');
   }
 
+  const paramsCopy = getParamsCopy();
   // params need to be approached in a different way, this is a change that is critical to make
   /*const typeAux = params.type;
   const superTypeAux = params.superType;
@@ -96,19 +99,19 @@ const getEpisodesURL = (seasonId) => {
   delete(params.type);
   delete(params.superType);
   delete(params.seriesId);*/
-  params.includePreOrders = true;
-  params.followup = ['episodeNumberInSeason', 'seasonNumber', 'usefulStreamableOffers'];
-  params.offset = 0;
-  params.seasonId = seasonId;
-  params.sortBy = 'episodeNumberInSeason';
+  paramsCopy.includePreOrders = true;
+  paramsCopy.followup = ['episodeNumberInSeason', 'seasonNumber', 'usefulStreamableOffers'];
+  paramsCopy.offset = 0;
+  paramsCopy.seasonId = seasonId;
+  paramsCopy.sortBy = 'episodeNumberInSeason';
 
-  console.log(params);
+  console.log(paramsCopy);
 
-  const queryString = Object.keys(params)
+  const queryString = Object.keys(paramsCopy)
     .map((key) => {
-      const value = Array.isArray(params[key])
-        ? params[key].map((v) => `${v}`).join(`&${key}=`)
-        : encodeURIComponent(params[key]);
+      const value = Array.isArray(paramsCopy[key])
+        ? paramsCopy[key].map((v) => `${v}`).join(`&${key}=`)
+        : encodeURIComponent(paramsCopy[key]);
       return `${encodeURIComponent(key)}=${(value)}`;
     })
     .join('&');
@@ -210,7 +213,7 @@ const parseEpisodesData = (data) => {
     const episodeNumber = item.episodeNumberInSeason[0];
     const episodeTitle = item.title[0];
     const episodeReleaseDate = item.releaseTime[0];
-    const tmsId = item.tmsId[0];
+    const tmsId = item.tmsId?.[0];
 
     const rentalCostSD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'sd')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr')[0]?.price?.[0];
     const rentalCostHD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'hdx')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr')[0]?.price?.[0];
@@ -376,7 +379,39 @@ const init = async (media, outputLocation) => {
 
   saveData(results, outputLocation);
   return results;
-};          
+}; 
+
+const getParamsCopy = () => {
+  const paramsCopy = { ...params };
+  return paramsCopy;
+};
+
+const getSeasonsURL = (seriesId) => {
+  if (typeof seriesId !== 'string') {
+    throw new Error('Invalid seriesId parameter. It must be a string.');
+  }
+
+  const paramsCopy = getParamsCopy();
+
+  paramsCopy.type = ['season'];
+  paramsCopy.superType = 'tv';
+  paramsCopy.includePreOrders = true;
+  paramsCopy.followup = ['episodeNumberInSeason', 'seasonNumber', 'usefulStreamableOffers'];
+  paramsCopy.offset = 0;
+  paramsCopy.seriesId = seriesId;
+
+  const queryString = Object.keys(paramsCopy)
+    .map((key) => {
+      const value = Array.isArray(paramsCopy[key])
+        ? paramsCopy[key].map((v) => `${v}`).join(`&${key}=`)
+        : encodeURIComponent(paramsCopy[key]);
+      return `${encodeURIComponent(key)}=${value}`;
+    })
+    .join('&');
+
+  return `${baseURL}?${queryString}`;
+};
+
 
 // Parses the command line arguments and calls the init function
 const main = async () => {
