@@ -61,44 +61,12 @@ const getData = async (url) => {
   }
 };
 
-/*const getSeasonsURL = (seriesId) => {
-  if (typeof seriesId !== 'string') {
-    throw new Error('Invalid seriesId parameter. It must be a string.');
-  }
-
-  params.type = ['season'];
-  params.superType = 'tv';
-  params.includePreOrders = true;
-  params.followup = ['episodeNumberInSeason', 'seasonNumber', 'usefulStreamableOffers'];
-  params.offset = 0;
-  params.seriesId = seriesId;
-
-  const queryString = Object.keys(params)
-    .map((key) => {
-      const value = Array.isArray(params[key])
-        ? params[key].map((v) => `${v}`).join(`&${key}=`)
-        : encodeURIComponent(params[key]);
-      return `${encodeURIComponent(key)}=${value}`;
-    })
-    .join('&');
-
-  return `${baseURL}?${queryString}`;
-};*/
-
 const getEpisodesURL = (seasonId) => {
   if (typeof seasonId !== 'string') {
     throw new Error('Invalid seasonId parameter. It must be a string.');
   }
 
   const paramsCopy = getParamsCopy();
-  // params need to be approached in a different way, this is a change that is critical to make
-  /*const typeAux = params.type;
-  const superTypeAux = params.superType;
-  const seriesIdAux = params.seriesId;
-
-  delete(params.type);
-  delete(params.superType);
-  delete(params.seriesId);*/
   paramsCopy.includePreOrders = true;
   paramsCopy.followup = ['episodeNumberInSeason', 'seasonNumber', 'usefulStreamableOffers'];
   paramsCopy.offset = 0;
@@ -113,12 +81,6 @@ const getEpisodesURL = (seasonId) => {
       return `${encodeURIComponent(key)}=${(value)}`;
     })
     .join('&');
-
-    //params need to be approached in a different way, this is a change that is critical to make
-    /*params.type = typeAux;
-    params.superType = superTypeAux;
-    params.seriesId = seriesIdAux;*/
-
   return `${baseURL}?${queryString}`;
 };
 
@@ -235,8 +197,6 @@ const parseEpisodesData = (data) => {
   });
 };
 
-// Higher-order function that takes a media parameter and a data parameter
-// and returns the result of calling either parseMovieData or parseSeriesData on the data
 const parseDataByMedia = (media, data) => {
   let parseFunction;
   if (media === 'movies') {
