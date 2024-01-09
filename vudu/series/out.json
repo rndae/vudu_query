@@ -1,841 +1,285 @@
 [
   {
-    "content_id": "1925588",
-    "series_id": "848886",
-    "title": "The Zoo: Season 5",
-    "release_date": "2021-09-24",
-    "purchase_cost_sd": "19.9900",
-    "purchase_cost_hd": "19.9900",
-    "seasons": [
-      {
-        "seasonNumber": "1",
-        "seasonId": "848889",
-        "purchaseCostSD": "9.9900",
-        "purchaseCostHD": "9.9900",
-        "episodes": [
-          {
-            "episodeId": "848892",
-            "episodeNumber": "1",
-            "episodeTitle": "The Zoo: Higher Purpose",
-            "episodeReleaseDate": "2017-02-18",
-            "tmsId": "EP026008310001",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "848895",
-            "episodeNumber": "2",
-            "episodeTitle": "The Zoo: Handle With Care",
-            "episodeReleaseDate": "2017-02-25",
-            "tmsId": "EP026008310003",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "848898",
-            "episodeNumber": "3",
-            "episodeTitle": "The Zoo: Walk on the Wild Side",
-            "episodeReleaseDate": "2017-03-04",
-            "tmsId": "EP026008310004",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "848901",
-            "episodeNumber": "4",
-            "episodeTitle": "The Zoo: Moving Day",
-            "episodeReleaseDate": "2017-03-11",
-            "tmsId": "EP026008310002",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "848904",
-            "episodeNumber": "5",
-            "episodeTitle": "The Zoo: A Star is Born",
-            "episodeReleaseDate": "2017-03-18",
-            "tmsId": "EP026008310005",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "848907",
-            "episodeNumber": "6",
-            "episodeTitle": "The Zoo: Love Shack",
-            "episodeReleaseDate": "2017-03-25",
-            "tmsId": "EP026008310006",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "848910",
-            "episodeNumber": "7",
-            "episodeTitle": "The Zoo: Birds and the Bees",
-            "episodeReleaseDate": "2017-04-01",
-            "tmsId": "EP026008310007",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "848913",
-            "episodeNumber": "8",
-            "episodeTitle": "The Zoo: Back to Africa",
-            "episodeReleaseDate": "2017-04-08",
-            "tmsId": "EP026008310008",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          }
-        ]
-      },
-      {
-        "seasonNumber": "2",
-        "seasonId": "932893",
-        "purchaseCostSD": "14.9900",
-        "purchaseCostHD": "14.9900",
-        "episodes": [
-          {
-            "episodeId": "932896",
-            "episodeNumber": "1",
-            "episodeTitle": "The Zoo: Kangaroo Dave",
-            "episodeReleaseDate": "2018-03-10",
-            "tmsId": "EP026008310015",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "932899",
-            "episodeNumber": "2",
-            "episodeTitle": "The Zoo: The Tiger's Dance",
-            "episodeReleaseDate": "2018-03-17",
-            "tmsId": "EP026008310016",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "932902",
-            "episodeNumber": "3",
-            "episodeTitle": "The Zoo: Bears Will Be Bears",
-            "episodeReleaseDate": "2018-03-24",
-            "tmsId": "EP026008310017",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "932905",
-            "episodeNumber": "4",
-            "episodeTitle": "The Zoo: An Elephant's Trust",
-            "episodeReleaseDate": "2018-03-31",
-            "tmsId": "EP026008310018",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "932908",
-            "episodeNumber": "5",
-            "episodeTitle": "The Zoo: Slow Loris Romance",
-            "episodeReleaseDate": "2018-04-07",
-            "tmsId": "EP026008310019",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "932911",
-            "episodeNumber": "6",
-            "episodeTitle": "The Zoo: A Polar Bear in the City",
-            "episodeReleaseDate": "2018-04-14",
-            "tmsId": "EP026008310014",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "932914",
-            "episodeNumber": "7",
-            "episodeTitle": "The Zoo: The Eagle Has Landed",
-            "episodeReleaseDate": "2018-04-21",
-            "tmsId": "EP026008310020",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "932917",
-            "episodeNumber": "8",
-            "episodeTitle": "The Zoo: Miracle Cub",
-            "episodeReleaseDate": "2018-04-28",
-            "tmsId": "EP026008310010",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "932920",
-            "episodeNumber": "9",
-            "episodeTitle": "The Zoo: Training Dragons",
-            "episodeReleaseDate": "2018-05-05",
-            "tmsId": "EP026008310021",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "932923",
-            "episodeNumber": "10",
-            "episodeTitle": "The Zoo: A Gorilla with Heart",
-            "episodeReleaseDate": "2018-05-12",
-            "tmsId": "EP026008310022",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          }
-        ]
-      },
-      {
-        "seasonNumber": "3",
-        "seasonId": "1061595",
-        "purchaseCostSD": "24.9900",
-        "purchaseCostHD": "24.9900",
-        "episodes": [
-          {
-            "episodeId": "1061598",
-            "episodeNumber": "1",
-            "episodeTitle": "The Zoo: The Marvelous Mott Mott",
-            "episodeReleaseDate": "2019-02-10",
-            "tmsId": "EP026008310030",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061601",
-            "episodeNumber": "2",
-            "episodeTitle": "The Zoo: A Sea Lion Pup Grows Up",
-            "episodeReleaseDate": "2019-02-17",
-            "tmsId": "EP026008310026",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061604",
-            "episodeNumber": "3",
-            "episodeTitle": "The Zoo: Andre the Baby Goat",
-            "episodeReleaseDate": "2019-02-24",
-            "tmsId": "EP026008310027",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061607",
-            "episodeNumber": "4",
-            "episodeTitle": "The Zoo: Otter Under the Weather",
-            "episodeReleaseDate": "2019-03-03",
-            "tmsId": "EP026008310031",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061610",
-            "episodeNumber": "5",
-            "episodeTitle": "The Zoo: Baby Bunnies, Big World",
-            "episodeReleaseDate": "2019-03-10",
-            "tmsId": "EP026008310029",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061613",
-            "episodeNumber": "6",
-            "episodeTitle": "The Zoo: The Kings of Queens",
-            "episodeReleaseDate": "2019-03-17",
-            "tmsId": "EP026008310032",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061616",
-            "episodeNumber": "7",
-            "episodeTitle": "The Zoo: A Warthog Named Peaches",
-            "episodeReleaseDate": "2019-03-24",
-            "tmsId": "EP026008310034",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061619",
-            "episodeNumber": "8",
-            "episodeTitle": "The Zoo: The Great Gaur Move",
-            "episodeReleaseDate": "2019-03-31",
-            "tmsId": "EP026008310035",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061622",
-            "episodeNumber": "9",
-            "episodeTitle": "The Zoo: Grumpy Cats' New Digs",
-            "episodeReleaseDate": "2019-04-07",
-            "tmsId": "EP026008310036",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061625",
-            "episodeNumber": "10",
-            "episodeTitle": "The Zoo: Bouba's Back",
-            "episodeReleaseDate": "2019-04-14",
-            "tmsId": "EP026008310028",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061628",
-            "episodeNumber": "11",
-            "episodeTitle": "The Zoo: Giraffe in the City",
-            "episodeReleaseDate": "2019-04-21",
-            "tmsId": "EP026008310037",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061631",
-            "episodeNumber": "12",
-            "episodeTitle": "The Zoo: Taming of the Shrew",
-            "episodeReleaseDate": "2019-04-28",
-            "tmsId": "EP026008310038",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061634",
-            "episodeNumber": "13",
-            "episodeTitle": "The Zoo: Mending Willow",
-            "episodeReleaseDate": "2019-05-05",
-            "tmsId": "EP026008310039",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1061637",
-            "episodeNumber": "14",
-            "episodeTitle": "The Zoo: Snow Monkey Social",
-            "episodeReleaseDate": "2019-05-12",
-            "tmsId": "EP026008310040",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          }
-        ]
-      },
-      {
-        "seasonNumber": "4",
-        "seasonId": "1407889",
-        "purchaseCostSD": "24.9900",
-        "purchaseCostHD": "24.9900",
-        "episodes": [
-          {
-            "episodeId": "1407892",
-            "episodeNumber": "1",
-            "episodeTitle": "The Zoo: A New Beginning",
-            "episodeReleaseDate": "2020-04-04",
-            "tmsId": "EP026008310050",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407895",
-            "episodeNumber": "2",
-            "episodeTitle": "The Zoo: The Great Turtle Comeback",
-            "episodeReleaseDate": "2020-04-04",
-            "tmsId": "EP026008310042",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407898",
-            "episodeNumber": "3",
-            "episodeTitle": "The Zoo: Tiger's Day at the Dentist",
-            "episodeReleaseDate": "2020-04-11",
-            "tmsId": "EP026008310052",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407901",
-            "episodeNumber": "4",
-            "episodeTitle": "The Zoo: Beloved Bugs",
-            "episodeReleaseDate": "2020-04-18",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407904",
-            "episodeNumber": "5",
-            "episodeTitle": "The Zoo: Wallaby in the City",
-            "episodeReleaseDate": "2020-04-25",
-            "tmsId": "EP026008310057",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407907",
-            "episodeNumber": "6",
-            "episodeTitle": "The Zoo: Cougar Cub Rescue",
-            "episodeReleaseDate": "2020-05-02",
-            "tmsId": "EP026008310051",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407910",
-            "episodeNumber": "7",
-            "episodeTitle": "The Zoo: Velcro the Incredible",
-            "episodeReleaseDate": "2020-05-09",
-            "tmsId": "EP026008310041",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407913",
-            "episodeNumber": "8",
-            "episodeTitle": "The Zoo: New Chick on the Block",
-            "episodeReleaseDate": "2020-05-16",
-            "tmsId": "EP026008310043",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407916",
-            "episodeNumber": "9",
-            "episodeTitle": "The Zoo: Fawns Become Friends",
-            "episodeReleaseDate": "2020-05-23",
-            "tmsId": "EP026008310065",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407919",
-            "episodeNumber": "10",
-            "episodeTitle": "The Zoo: Porcupine Blind Date",
-            "episodeReleaseDate": "0202-05-30",
-            "tmsId": "EP026008310066",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407922",
-            "episodeNumber": "11",
-            "episodeTitle": "The Zoo: A Rare Egg",
-            "episodeReleaseDate": "2020-06-06",
-            "tmsId": "EP026008310068",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407925",
-            "episodeNumber": "12",
-            "episodeTitle": "The Zoo: Penguins In Love",
-            "episodeReleaseDate": "2020-06-13",
-            "tmsId": "EP026008310069",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407928",
-            "episodeNumber": "13",
-            "episodeTitle": "The Zoo: Great Snakes!",
-            "episodeReleaseDate": "2020-06-20",
-            "tmsId": "EP026008310070",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1407931",
-            "episodeNumber": "14",
-            "episodeTitle": "The Zoo: Wild Dogs on the Move",
-            "episodeReleaseDate": "2020-06-27",
-            "tmsId": "EP026008310072",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1430076",
-            "episodeNumber": "105",
-            "episodeTitle": "The Zoo: Covid19 & Your Animals",
-            "episodeReleaseDate": "2020-04-25",
-            "tmsId": "EP026008310067",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          }
-        ]
-      },
-      {
-        "seasonNumber": "5",
-        "seasonId": "1925588",
-        "purchaseCostSD": "19.9900",
-        "purchaseCostHD": "19.9900",
-        "episodes": [
-          {
-            "episodeId": "1925591",
-            "episodeNumber": "1",
-            "episodeTitle": "The Zoo: A New Reality",
-            "episodeReleaseDate": "2021-09-24",
-            "tmsId": "EP026008310074",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1925594",
-            "episodeNumber": "2",
-            "episodeTitle": "The Zoo: Bouncing Troody",
-            "episodeReleaseDate": "2021-10-10",
-            "tmsId": "EP026008310076",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1925597",
-            "episodeNumber": "3",
-            "episodeTitle": "The Zoo: New Cats on the Block",
-            "episodeReleaseDate": "2021-10-16",
-            "tmsId": "EP026008310077",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1925600",
-            "episodeNumber": "4",
-            "episodeTitle": "The Zoo: Cubs in Queens",
-            "episodeReleaseDate": "2021-10-23",
-            "tmsId": "EP026008310079",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1925603",
-            "episodeNumber": "5",
-            "episodeTitle": "The Zoo: Giraffe Dance",
-            "episodeReleaseDate": "2021-10-30",
-            "tmsId": "EP026008310078",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1925606",
-            "episodeNumber": "6",
-            "episodeTitle": "The Zoo: Mystery Piglet",
-            "episodeReleaseDate": "2021-11-06",
-            "tmsId": "EP026008310080",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1925609",
-            "episodeNumber": "7",
-            "episodeTitle": "The Zoo: The Elephant Next Door",
-            "episodeReleaseDate": "2021-11-13",
-            "tmsId": "EP026008310082",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1925612",
-            "episodeNumber": "8",
-            "episodeTitle": "The Zoo: Tiny Fox, Big Heart",
-            "episodeReleaseDate": "2021-11-20",
-            "tmsId": "EP026008310083",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1925615",
-            "episodeNumber": "9",
-            "episodeTitle": "The Zoo: Lemur Love",
-            "episodeReleaseDate": "2021-11-27",
-            "tmsId": "EP026008310081",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1925618",
-            "episodeNumber": "10",
-            "episodeTitle": "The Zoo: Kangaroos in Trees",
-            "episodeReleaseDate": "2021-12-02",
-            "tmsId": "EP026008310085",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1925621",
-            "episodeNumber": "11",
-            "episodeTitle": "The Zoo: Bronx Blizzard",
-            "episodeReleaseDate": "2021-12-04",
-            "tmsId": "EP026008310087",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "1925624",
-            "episodeNumber": "12",
-            "episodeTitle": "The Zoo: Handsome Hog",
-            "episodeReleaseDate": "2021-12-11",
-            "tmsId": "EP026008310088",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "content_id": "410596",
-    "series_id": "410595",
-    "title": "Zoo Vets: Season 1",
-    "release_date": "2009-01-01",
-    "purchase_cost_sd": "4.9900",
-    "purchase_cost_hd": "7.9900",
-    "seasons": [
-      {
-        "seasonNumber": "1",
-        "seasonId": "410596",
-        "purchaseCostSD": "4.9900",
-        "purchaseCostHD": "7.9900",
-        "episodes": [
-          {
-            "episodeId": "410600",
-            "episodeNumber": "1",
-            "episodeTitle": "Zoo Vets: Tails, Teeth and Snouts",
-            "episodeReleaseDate": "2010-12-05",
-            "tmsId": "EP010310720003",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "410608",
-            "episodeNumber": "2",
-            "episodeTitle": "Zoo Vets: Claws, Paws and Fins",
-            "episodeReleaseDate": "2010-12-07",
-            "tmsId": "EP010310720001",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "410612",
-            "episodeNumber": "3",
-            "episodeTitle": "Zoo Vets: Fangs, Flippers and Tusks",
-            "episodeReleaseDate": "2009-10-01",
-            "tmsId": "EP010310720002",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "content_id": "926694",
-    "series_id": "926693",
-    "title": "Zoofari: Volume 1",
-    "release_date": "2018-02-06",
-    "purchase_cost_sd": "14.9900",
-    "purchase_cost_hd": "19.9900",
-    "seasons": [
-      {
-        "seasonNumber": "1",
-        "seasonId": "926694",
-        "purchaseCostSD": "14.9900",
-        "purchaseCostHD": "19.9900",
-        "episodes": [
-          {
-            "episodeId": "926697",
-            "episodeNumber": "1",
-            "episodeTitle": "Zoofari: Best Pets/Jungle Gym",
-            "episodeReleaseDate": "2018-02-06",
-            "tmsId": "EP028826890001",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926700",
-            "episodeNumber": "2",
-            "episodeTitle": "Zoofari: Sound Safari/Frogs and Toads",
-            "episodeReleaseDate": "2018-02-07",
-            "tmsId": "EP028826890002",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926703",
-            "episodeNumber": "3",
-            "episodeTitle": "Zoofari: Fancy Animal Photoshoot/Strongest Animals",
-            "episodeReleaseDate": "2018-02-08",
-            "tmsId": "EP028826890003",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926706",
-            "episodeNumber": "4",
-            "episodeTitle": "Zoofari: Show and Tell/Festival of Fluff",
-            "episodeReleaseDate": "2018-02-08",
-            "tmsId": "EP028826890004",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926709",
-            "episodeNumber": "5",
-            "episodeTitle": "Zoofari: Animals Got Talent/Wild Dance Party",
-            "episodeReleaseDate": "2018-02-10",
-            "tmsId": "EP028826890005",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926712",
-            "episodeNumber": "6",
-            "episodeTitle": "Zoofari: Big Animals/Tiny Animals",
-            "episodeReleaseDate": "2018-02-12",
-            "tmsId": "EP028826890006",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926715",
-            "episodeNumber": "7",
-            "episodeTitle": "Zoofari: Everybody Be Cool/Forest Fun",
-            "episodeReleaseDate": "2018-02-14",
-            "tmsId": "EP028826890007",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926718",
-            "episodeNumber": "8",
-            "episodeTitle": "Zoofari: Funniest Monkey Countdown/Flying Festival",
-            "episodeReleaseDate": "2018-02-15",
-            "tmsId": "EP028826890008",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926721",
-            "episodeNumber": "9",
-            "episodeTitle": "Zoofari: Baby Animal Nap Time/Desert Days",
-            "episodeReleaseDate": "2018-02-15",
-            "tmsId": "EP028826890009",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926724",
-            "episodeNumber": "10",
-            "episodeTitle": "Zoofari: Home Sweet Home/Life is a Hoot",
-            "episodeReleaseDate": "2018-02-17",
-            "tmsId": "EP028826890010",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926727",
-            "episodeNumber": "11",
-            "episodeTitle": "Zoofari: Snow Much Fun/Zoofari Farm",
-            "episodeReleaseDate": "2018-03-17",
-            "tmsId": "EP028826890011",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926730",
-            "episodeNumber": "12",
-            "episodeTitle": "Zoofari: Palling Around/Hide-and-Peek",
-            "episodeReleaseDate": "2018-03-24",
-            "tmsId": "EP028826890012",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "926733",
-            "episodeNumber": "13",
-            "episodeTitle": "Zoofari: Whose Nose Knows?/Four Seasons",
-            "episodeReleaseDate": "2018-03-31",
-            "tmsId": "EP028826890013",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          }
-        ]
-      },
-      {
-        "seasonNumber": "2",
-        "seasonId": "941453",
-        "purchaseCostSD": "14.9900",
-        "purchaseCostHD": "19.9900",
-        "episodes": [
-          {
-            "episodeId": "941456",
-            "episodeNumber": "1",
-            "episodeTitle": "Zoofari: Animal Business/Water Fun",
-            "episodeReleaseDate": "2018-04-07",
-            "tmsId": "EP028826890014",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "941459",
-            "episodeNumber": "2",
-            "episodeTitle": "Zoofari: Amazing Mom Awards/The Awesome Animal Games",
-            "episodeReleaseDate": "2018-05-13",
-            "tmsId": "EP028826890015",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "941462",
-            "episodeNumber": "3",
-            "episodeTitle": "Zoofari: Bunny Bonanza/Panda-Monium",
-            "episodeReleaseDate": "2018-10-15",
-            "tmsId": "EP028826890047",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "941465",
-            "episodeNumber": "4",
-            "episodeTitle": "Zoofari: Animal Head to Toe/Lizard Lan",
-            "episodeReleaseDate": "2018-10-16",
-            "tmsId": "EP028826890050",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "941468",
-            "episodeNumber": "5",
-            "episodeTitle": "Zoofari: Dogs of Zoofari/Cats of Zoofari",
-            "episodeReleaseDate": "2018-10-17",
-            "tmsId": "EP028826890049",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "941471",
-            "episodeNumber": "6",
-            "episodeTitle": "Zoofari: Meowsical the Musical/Story Time",
-            "episodeReleaseDate": "2018-10-19",
-            "tmsId": "EP028826890051",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          },
-          {
-            "episodeId": "941474",
-            "episodeNumber": "7",
-            "episodeTitle": "Zoofari: Halloween Costume Party/Pre-school of Fish",
-            "episodeReleaseDate": "2018-10-19",
-            "tmsId": "EP028826890046",
-            "purchaseCostSD": "1.9900",
-            "purchaseCostHD": "2.9900"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "content_id": "941453",
-    "series_id": "926693",
-    "title": "Zoofari: Volume 2",
+    "content_id": "926693",
+    "title": "Zoofari",
     "release_date": "2018-04-07",
+    "rental_cost_sd": null,
+    "rental_cost_hd": null,
     "purchase_cost_sd": "14.9900",
-    "purchase_cost_hd": "19.9900"
+    "purchase_cost_hd": "19.9900",
+    "seasons": [
+      {
+        "season_number": "1",
+        "season_id": "926694",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "14.9900",
+        "purchase_cost_hd": "19.9900",
+        "episodes": [
+          {
+            "episode_id": "926697",
+            "episode_number": "1",
+            "episode_title": "Zoofari: Best Pets/Jungle Gym",
+            "release_date": "2018-02-06",
+            "tms_id": "EP028826890001",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926700",
+            "episode_number": "2",
+            "episode_title": "Zoofari: Sound Safari/Frogs and Toads",
+            "release_date": "2018-02-07",
+            "tms_id": "EP028826890002",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926703",
+            "episode_number": "3",
+            "episode_title": "Zoofari: Fancy Animal Photoshoot/Strongest Animals",
+            "release_date": "2018-02-08",
+            "tms_id": "EP028826890003",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926706",
+            "episode_number": "4",
+            "episode_title": "Zoofari: Show and Tell/Festival of Fluff",
+            "release_date": "2018-02-08",
+            "tms_id": "EP028826890004",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926709",
+            "episode_number": "5",
+            "episode_title": "Zoofari: Animals Got Talent/Wild Dance Party",
+            "release_date": "2018-02-10",
+            "tms_id": "EP028826890005",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926712",
+            "episode_number": "6",
+            "episode_title": "Zoofari: Big Animals/Tiny Animals",
+            "release_date": "2018-02-12",
+            "tms_id": "EP028826890006",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926715",
+            "episode_number": "7",
+            "episode_title": "Zoofari: Everybody Be Cool/Forest Fun",
+            "release_date": "2018-02-14",
+            "tms_id": "EP028826890007",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926718",
+            "episode_number": "8",
+            "episode_title": "Zoofari: Funniest Monkey Countdown/Flying Festival",
+            "release_date": "2018-02-15",
+            "tms_id": "EP028826890008",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926721",
+            "episode_number": "9",
+            "episode_title": "Zoofari: Baby Animal Nap Time/Desert Days",
+            "release_date": "2018-02-15",
+            "tms_id": "EP028826890009",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926724",
+            "episode_number": "10",
+            "episode_title": "Zoofari: Home Sweet Home/Life is a Hoot",
+            "release_date": "2018-02-17",
+            "tms_id": "EP028826890010",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926727",
+            "episode_number": "11",
+            "episode_title": "Zoofari: Snow Much Fun/Zoofari Farm",
+            "release_date": "2018-03-17",
+            "tms_id": "EP028826890011",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926730",
+            "episode_number": "12",
+            "episode_title": "Zoofari: Palling Around/Hide-and-Peek",
+            "release_date": "2018-03-24",
+            "tms_id": "EP028826890012",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "926733",
+            "episode_number": "13",
+            "episode_title": "Zoofari: Whose Nose Knows?/Four Seasons",
+            "release_date": "2018-03-31",
+            "tms_id": "EP028826890013",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      },
+      {
+        "season_number": "2",
+        "season_id": "941453",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "14.9900",
+        "purchase_cost_hd": "19.9900",
+        "episodes": [
+          {
+            "episode_id": "941456",
+            "episode_number": "1",
+            "episode_title": "Zoofari: Animal Business/Water Fun",
+            "release_date": "2018-04-07",
+            "tms_id": "EP028826890014",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "941459",
+            "episode_number": "2",
+            "episode_title": "Zoofari: Amazing Mom Awards/The Awesome Animal Games",
+            "release_date": "2018-05-13",
+            "tms_id": "EP028826890015",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "941462",
+            "episode_number": "3",
+            "episode_title": "Zoofari: Bunny Bonanza/Panda-Monium",
+            "release_date": "2018-10-15",
+            "tms_id": "EP028826890047",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "941465",
+            "episode_number": "4",
+            "episode_title": "Zoofari: Animal Head to Toe/Lizard Lan",
+            "release_date": "2018-10-16",
+            "tms_id": "EP028826890050",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "941468",
+            "episode_number": "5",
+            "episode_title": "Zoofari: Dogs of Zoofari/Cats of Zoofari",
+            "release_date": "2018-10-17",
+            "tms_id": "EP028826890049",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "941471",
+            "episode_number": "6",
+            "episode_title": "Zoofari: Meowsical the Musical/Story Time",
+            "release_date": "2018-10-19",
+            "tms_id": "EP028826890051",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "941474",
+            "episode_number": "7",
+            "episode_title": "Zoofari: Halloween Costume Party/Pre-school of Fish",
+            "release_date": "2018-10-19",
+            "tms_id": "EP028826890046",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "content_id": "2930160",
+    "title": "Grimsburg",
+    "release_date": "2024-01-07",
+    "rental_cost_sd": null,
+    "rental_cost_hd": null,
+    "purchase_cost_sd": "14.9900",
+    "purchase_cost_hd": "19.9900",
+    "seasons": [
+      {
+        "season_number": "1",
+        "season_id": "2930161",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "14.9900",
+        "purchase_cost_hd": "19.9900",
+        "episodes": [
+          {
+            "episode_id": "2930164",
+            "episode_number": "1",
+            "episode_title": "Grimsburg: Pilot",
+            "release_date": "2024-01-07",
+            "tms_id": "EP043098100001",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      }
+    ]
   }
 ]

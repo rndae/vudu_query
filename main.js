@@ -105,8 +105,6 @@ const getEpisodesURL = (seasonId) => {
   paramsCopy.seasonId = seasonId;
   paramsCopy.sortBy = 'episodeNumberInSeason';
 
-  console.log(paramsCopy);
-
   const queryString = Object.keys(paramsCopy)
     .map((key) => {
       const value = Array.isArray(paramsCopy[key])
@@ -153,10 +151,13 @@ const parseSeriesData = (data) => {
     throw new Error('Invalid data. It must have the content property.');
   }
 
+
   return data.content.map((item) => {
-    const contentId = item.contentId[0];
+    //const contentId = item.contentId[0];
     const seriesId = item.seriesId[0];
-    const title = item.title[0];
+    //const title = item.title[0];
+    const noSeasonTitle = item.title[0].substring(0, item.title[0].lastIndexOf(':'));
+    const title = noSeasonTitle;
     const releaseDate = item.releaseTime?.[0];
     const rentalCostSD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'sd')?.[0]?.offers[0]?.offer?.filter((offer) => offer.offerType[0] === 'ptr')?.[0]?.price?.[0];
     const rentalCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'ptr')?.[0]?.price?.[0];
@@ -164,8 +165,8 @@ const parseSeriesData = (data) => {
     const purchaseCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'pto')?.[0]?.price?.[0];
 
     return {
-      content_id: contentId,
-      series_id: seriesId,
+      content_id: seriesId,
+      //series_id: seriesId,
       title,
       release_date: releaseDate,
       rental_cost_sd: rentalCostSD,
@@ -191,12 +192,12 @@ const parseSeasonsData = (data) => {
     const purchaseCostHD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'hdx')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'pto')[0]?.price?.[0];
 
     return {
-      seasonNumber,
-      seasonId,
-      rentalCostSD,
-      rentalCostHD,
-      purchaseCostSD,
-      purchaseCostHD
+      season_number: seasonNumber,
+      season_id: seasonId,
+      rental_cost_sd: rentalCostSD,
+      rental_cost_hd: rentalCostHD,
+      purchase_cost_sd: purchaseCostSD,
+      purchase_cost_hd: purchaseCostHD
     };
   });
 };
@@ -221,15 +222,15 @@ const parseEpisodesData = (data) => {
     const purchaseCostHD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'hdx')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'pto')[0]?.price?.[0];
 
     return {
-      episodeId,
-      episodeNumber,
-      episodeTitle,
-      episodeReleaseDate,
-      tmsId,
-      rentalCostSD,
-      rentalCostHD,
-      purchaseCostSD,
-      purchaseCostHD
+      episode_id: episodeId,
+      episode_number: episodeNumber,
+      episode_title: episodeTitle,
+      release_date: episodeReleaseDate,
+      tms_id: tmsId,
+      rental_cost_sd: rentalCostSD,
+      rental_cost_hd: rentalCostHD,
+      purchase_cost_sd: purchaseCostSD,
+      purchase_cost_hd: purchaseCostHD
     };
   });
 };
@@ -253,7 +254,7 @@ const saveData = (data, outputLocation) => {
     throw new Error('Invalid output location. It must be a valid path.');
   }
 
-  const jsonString = JSON.stringify(data, null, 2);
+  const jsonString = JSON.stringify(data, (k, v) => v === undefined ? null : v, 2);
 
   // Create the directory if it does not exist
   fs.mkdirSync(outputLocation, { recursive: true });
@@ -324,7 +325,9 @@ const init = async (media, outputLocation) => {
     const seriesIds = new Set();
 
     for (let i = 0; i < results.length; i++) {
-      const seriesId = results[i].series_id;
+      //const seriesId = results[i].series_id;
+      const seriesId = results[i].content_id;
+
 
       if (seriesIds.has(seriesId)) {
         continue;
@@ -352,7 +355,7 @@ const init = async (media, outputLocation) => {
       }
 
       for (let j = 0; j < seasons.length; j++) {
-        const seasonId = seasons[j].seasonId;
+        const seasonId = seasons[j].season_id;
         const episodes = [];
 
         let episodesOffset = 0;
@@ -412,7 +415,6 @@ const getSeasonsURL = (seriesId) => {
   return `${baseURL}?${queryString}`;
 };
 
-
 // Parses the command line arguments and calls the init function
 const main = async () => {
   const args = process.argv.slice(2);
@@ -420,7 +422,7 @@ const main = async () => {
   console.log("Running with parameters: " + args);
 
   if (args.length < 2) {
-    throw new Error('Invalid arguments. You must provide the media and outputLocation parameters.');
+    throw new Error('Invalid arguments. You must provide the media and output parameters.');
   }
 
   const media = JSON.parse(args[0]).media;
