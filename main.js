@@ -2,6 +2,7 @@ const axios = require('axios');
 const fs = require('fs');
 
 const baseURL = 'https://apicache.vudu.com/api2/';
+const timeLimitPerRequestMs = 100;
 
 //params need to be approached in a different way, this is a change that is critical to make
 const params = {
@@ -60,7 +61,7 @@ const getData = async (url) => {
   }
 };
 
-const getDataWithDelay = (url, delay) => {
+const getDataWithDelay = (url) => {
   return new Promise((resolve, reject) => {
     setTimeout(async () => {
       try {
@@ -70,7 +71,7 @@ const getDataWithDelay = (url, delay) => {
       } catch (error) {
         reject(error);
       }
-    }, delay);
+    }, timeLimitPerRequestMs);
   });
 };
 
@@ -267,7 +268,7 @@ const init = async (media, outputLocation) => {
   while (moreBelow) {
     const url = getURL(media, offset);
     console.log(url);
-    const data = await getDataWithDelay(url, 1000);
+    const data = await getDataWithDelay(url);
     const parsedData = parseDataByMedia(media, data);
     results = results.concat(parsedData);
 
@@ -305,7 +306,7 @@ const init = async (media, outputLocation) => {
       while (seasonsMoreBelow) {
         const seasonsURL = getSeasonsURL(seriesId, seasonsOffset);
         console.log("SEASONS URL: " + seasonsURL);
-        const seasonsData = await getDataWithDelay(seasonsURL, 1000);
+        const seasonsData = await getDataWithDelay(seasonsURL);
         const parsedSeasonsData = parseSeasonsData(seasonsData);
         seasons.push(...parsedSeasonsData);
 
@@ -328,7 +329,7 @@ const init = async (media, outputLocation) => {
         while (episodesMoreBelow) {
           const episodesURL = getEpisodesURL(seasonId, episodesOffset);
           console.log("EPISODES URL: " + episodesURL);
-          const episodesData = await getDataWithDelay(episodesURL, 1000);
+          const episodesData = await getDataWithDelay(episodesURL);
           const parsedEpisodesData = parseEpisodesData(episodesData);
           episodes.push(...parsedEpisodesData);
           if (episodesData.moreBelow) {
