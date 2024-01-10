@@ -1,8 +1,1231 @@
 [
   {
+    "content_id": "681542",
+    "title": "Zoo",
+    "release_date": "2017-06-29",
+    "rental_cost_sd": null,
+    "rental_cost_hd": null,
+    "purchase_cost_sd": "19.9900",
+    "purchase_cost_hd": "19.9900",
+    "seasons": [
+      {
+        "season_number": "1",
+        "season_id": "681546",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "19.9900",
+        "purchase_cost_hd": "19.9900",
+        "episodes": [
+          {
+            "episode_id": "681550",
+            "episode_number": "1",
+            "episode_title": "Zoo: First Blood",
+            "release_date": "2015-06-30",
+            "tms_id": "EP019522870001",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "681554",
+            "episode_number": "2",
+            "episode_title": "Zoo: Fight or Flight",
+            "release_date": "2015-07-07",
+            "tms_id": "EP019522870002",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "681558",
+            "episode_number": "3",
+            "episode_title": "Zoo: The Silence of The Cicadas",
+            "release_date": "2015-07-14",
+            "tms_id": "EP019522870003",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "681562",
+            "episode_number": "4",
+            "episode_title": "Zoo: Pack Mentality",
+            "release_date": "2015-07-22",
+            "tms_id": "EP019522870004",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "681566",
+            "episode_number": "5",
+            "episode_title": "Zoo: Blame It On Leo",
+            "release_date": "2015-07-28",
+            "tms_id": "EP019522870005",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "681570",
+            "episode_number": "6",
+            "episode_title": "Zoo: This Is What It Sounds Like",
+            "release_date": "2015-08-04",
+            "tms_id": "EP019522870006",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "681574",
+            "episode_number": "7",
+            "episode_title": "Zoo: Sleuths",
+            "release_date": "2015-08-11",
+            "tms_id": "EP019522870007",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "681578",
+            "episode_number": "8",
+            "episode_title": "Zoo: The Cheese Stands Alone",
+            "release_date": "2015-08-18",
+            "tms_id": "EP019522870008",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "681582",
+            "episode_number": "9",
+            "episode_title": "Zoo: Murmuration",
+            "release_date": "2015-08-25",
+            "tms_id": "EP019522870009",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "681586",
+            "episode_number": "10",
+            "episode_title": "Zoo: Emotional Contagion",
+            "release_date": "2015-09-01",
+            "tms_id": "EP019522870010",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "681590",
+            "episode_number": "11",
+            "episode_title": "Zoo: Eats, Shoots, and Leaves/Wild Things",
+            "release_date": "2015-09-08",
+            "tms_id": "EP019522870016",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "681594",
+            "episode_number": "12",
+            "episode_title": "Zoo: That Great Bill Hill of Hope",
+            "release_date": "2015-09-15",
+            "tms_id": "EP019522870019",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      },
+      {
+        "season_number": "2",
+        "season_id": "773352",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "19.9900",
+        "purchase_cost_hd": "19.9900",
+        "episodes": [
+          {
+            "episode_id": "773356",
+            "episode_number": "1",
+            "episode_title": "Zoo: The Day Of The Beast",
+            "release_date": "2016-06-28",
+            "tms_id": "EP019522870026",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773360",
+            "episode_number": "2",
+            "episode_title": "Zoo: Caraquet",
+            "release_date": "2016-06-28",
+            "tms_id": "EP019522870027",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773364",
+            "episode_number": "3",
+            "episode_title": "Zoo: Collision Point",
+            "release_date": "2016-07-05",
+            "tms_id": "EP019522870028",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773368",
+            "episode_number": "4",
+            "episode_title": "Zoo: The Walls Of Jericho",
+            "release_date": "2016-07-12",
+            "tms_id": "EP019522870029",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773372",
+            "episode_number": "5",
+            "episode_title": "Zoo: The Moon And The Star",
+            "release_date": "2016-07-19",
+            "tms_id": "EP019522870030",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773376",
+            "episode_number": "6",
+            "episode_title": "Zoo: Sex, Lies And Jellyfish",
+            "release_date": "2016-07-26",
+            "tms_id": "EP019522870031",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773380",
+            "episode_number": "7",
+            "episode_title": "Zoo: Jamie's Got A Gun",
+            "release_date": "2016-08-02",
+            "tms_id": "EP019522870032",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773384",
+            "episode_number": "8",
+            "episode_title": "Zoo: Zero Sum",
+            "release_date": "2016-08-09",
+            "tms_id": "EP019522870034",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773388",
+            "episode_number": "9",
+            "episode_title": "Zoo: Sins Of The Father",
+            "release_date": "2016-08-16",
+            "tms_id": "EP019522870035",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773392",
+            "episode_number": "10",
+            "episode_title": "Zoo: The Yellow Brick Road",
+            "release_date": "2016-08-23",
+            "tms_id": "EP019522870036",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773396",
+            "episode_number": "11",
+            "episode_title": "Zoo: The Contingency",
+            "release_date": "2016-08-30",
+            "tms_id": "EP019522870037",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773400",
+            "episode_number": "12",
+            "episode_title": "Zoo: Pangaea",
+            "release_date": "2016-09-06",
+            "tms_id": "EP019522870038",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "773404",
+            "episode_number": "13",
+            "episode_title": "Zoo: Clementine",
+            "release_date": "2016-09-06",
+            "tms_id": "EP019522870039",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      },
+      {
+        "season_number": "3",
+        "season_id": "878948",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "19.9900",
+        "purchase_cost_hd": "19.9900",
+        "episodes": [
+          {
+            "episode_id": "878951",
+            "episode_number": "1",
+            "episode_title": "Zoo: No Place Like Home",
+            "release_date": "2017-06-29",
+            "tms_id": "EP019522870040",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878954",
+            "episode_number": "2",
+            "episode_title": "Zoo: Diaspora",
+            "release_date": "2017-07-06",
+            "tms_id": "EP019522870041",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878957",
+            "episode_number": "3",
+            "episode_title": "Zoo: Ten Years Gone",
+            "release_date": "2017-07-13",
+            "tms_id": "EP019522870042",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878960",
+            "episode_number": "4",
+            "episode_title": "Zoo: Welcome to the Terra Dome",
+            "release_date": "2017-07-20",
+            "tms_id": "EP019522870043",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878969",
+            "episode_number": "5",
+            "episode_title": "Zoo: Drop It Like It's Hot",
+            "release_date": "2017-07-27",
+            "tms_id": "EP019522870044",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878972",
+            "episode_number": "6",
+            "episode_title": "Zoo: Oz Is Oz",
+            "release_date": "2017-08-03",
+            "tms_id": "EP019522870045",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878975",
+            "episode_number": "7",
+            "episode_title": "Zoo: Wham, Bam, Thank You Sam",
+            "release_date": "2017-08-10",
+            "tms_id": "EP019522870046",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878978",
+            "episode_number": "8",
+            "episode_title": "Zoo: Stakes on a Plane",
+            "release_date": "2017-08-17",
+            "tms_id": "EP019522870047",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878981",
+            "episode_number": "9",
+            "episode_title": "Zoo: The Black Forest",
+            "release_date": "2017-08-24",
+            "tms_id": "EP019522870049",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878984",
+            "episode_number": "10",
+            "episode_title": "Zoo: One Upon A Time In The Nest",
+            "release_date": "2017-08-31",
+            "tms_id": "EP019522870050",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878987",
+            "episode_number": "11",
+            "episode_title": "Zoo: Cradles and Graves",
+            "release_date": "2017-09-07",
+            "tms_id": "EP019522870051",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878990",
+            "episode_number": "12",
+            "episode_title": "Zoo: West Side Story",
+            "release_date": "2017-09-14",
+            "tms_id": "EP019522870052",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "878993",
+            "episode_number": "13",
+            "episode_title": "Zoo: The Barrier",
+            "release_date": "2017-09-21",
+            "tms_id": "EP019522870048",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "content_id": "848886",
+    "title": "The Zoo",
+    "release_date": "2019-02-10",
+    "rental_cost_sd": null,
+    "rental_cost_hd": null,
+    "purchase_cost_sd": "24.9900",
+    "purchase_cost_hd": "24.9900",
+    "seasons": [
+      {
+        "season_number": "5",
+        "season_id": "1925588",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "19.9900",
+        "purchase_cost_hd": "19.9900",
+        "episodes": [
+          {
+            "episode_id": "1925591",
+            "episode_number": "1",
+            "episode_title": "The Zoo: A New Reality",
+            "release_date": "2021-09-24",
+            "tms_id": "EP026008310074",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1925594",
+            "episode_number": "2",
+            "episode_title": "The Zoo: Bouncing Troody",
+            "release_date": "2021-10-10",
+            "tms_id": "EP026008310076",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1925597",
+            "episode_number": "3",
+            "episode_title": "The Zoo: New Cats on the Block",
+            "release_date": "2021-10-16",
+            "tms_id": "EP026008310077",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1925600",
+            "episode_number": "4",
+            "episode_title": "The Zoo: Cubs in Queens",
+            "release_date": "2021-10-23",
+            "tms_id": "EP026008310079",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1925603",
+            "episode_number": "5",
+            "episode_title": "The Zoo: Giraffe Dance",
+            "release_date": "2021-10-30",
+            "tms_id": "EP026008310078",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1925606",
+            "episode_number": "6",
+            "episode_title": "The Zoo: Mystery Piglet",
+            "release_date": "2021-11-06",
+            "tms_id": "EP026008310080",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1925609",
+            "episode_number": "7",
+            "episode_title": "The Zoo: The Elephant Next Door",
+            "release_date": "2021-11-13",
+            "tms_id": "EP026008310082",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1925612",
+            "episode_number": "8",
+            "episode_title": "The Zoo: Tiny Fox, Big Heart",
+            "release_date": "2021-11-20",
+            "tms_id": "EP026008310083",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1925615",
+            "episode_number": "9",
+            "episode_title": "The Zoo: Lemur Love",
+            "release_date": "2021-11-27",
+            "tms_id": "EP026008310081",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1925618",
+            "episode_number": "10",
+            "episode_title": "The Zoo: Kangaroos in Trees",
+            "release_date": "2021-12-02",
+            "tms_id": "EP026008310085",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1925621",
+            "episode_number": "11",
+            "episode_title": "The Zoo: Bronx Blizzard",
+            "release_date": "2021-12-04",
+            "tms_id": "EP026008310087",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1925624",
+            "episode_number": "12",
+            "episode_title": "The Zoo: Handsome Hog",
+            "release_date": "2021-12-11",
+            "tms_id": "EP026008310088",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      },
+      {
+        "season_number": "1",
+        "season_id": "848889",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "9.9900",
+        "purchase_cost_hd": "9.9900",
+        "episodes": [
+          {
+            "episode_id": "848892",
+            "episode_number": "1",
+            "episode_title": "The Zoo: Higher Purpose",
+            "release_date": "2017-02-18",
+            "tms_id": "EP026008310001",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "848895",
+            "episode_number": "2",
+            "episode_title": "The Zoo: Handle With Care",
+            "release_date": "2017-02-25",
+            "tms_id": "EP026008310003",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "848898",
+            "episode_number": "3",
+            "episode_title": "The Zoo: Walk on the Wild Side",
+            "release_date": "2017-03-04",
+            "tms_id": "EP026008310004",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "848901",
+            "episode_number": "4",
+            "episode_title": "The Zoo: Moving Day",
+            "release_date": "2017-03-11",
+            "tms_id": "EP026008310002",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "848904",
+            "episode_number": "5",
+            "episode_title": "The Zoo: A Star is Born",
+            "release_date": "2017-03-18",
+            "tms_id": "EP026008310005",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "848907",
+            "episode_number": "6",
+            "episode_title": "The Zoo: Love Shack",
+            "release_date": "2017-03-25",
+            "tms_id": "EP026008310006",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "848910",
+            "episode_number": "7",
+            "episode_title": "The Zoo: Birds and the Bees",
+            "release_date": "2017-04-01",
+            "tms_id": "EP026008310007",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "848913",
+            "episode_number": "8",
+            "episode_title": "The Zoo: Back to Africa",
+            "release_date": "2017-04-08",
+            "tms_id": "EP026008310008",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      },
+      {
+        "season_number": "2",
+        "season_id": "932893",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "14.9900",
+        "purchase_cost_hd": "14.9900",
+        "episodes": [
+          {
+            "episode_id": "932896",
+            "episode_number": "1",
+            "episode_title": "The Zoo: Kangaroo Dave",
+            "release_date": "2018-03-10",
+            "tms_id": "EP026008310015",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "932899",
+            "episode_number": "2",
+            "episode_title": "The Zoo: The Tiger's Dance",
+            "release_date": "2018-03-17",
+            "tms_id": "EP026008310016",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "932902",
+            "episode_number": "3",
+            "episode_title": "The Zoo: Bears Will Be Bears",
+            "release_date": "2018-03-24",
+            "tms_id": "EP026008310017",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "932905",
+            "episode_number": "4",
+            "episode_title": "The Zoo: An Elephant's Trust",
+            "release_date": "2018-03-31",
+            "tms_id": "EP026008310018",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "932908",
+            "episode_number": "5",
+            "episode_title": "The Zoo: Slow Loris Romance",
+            "release_date": "2018-04-07",
+            "tms_id": "EP026008310019",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "932911",
+            "episode_number": "6",
+            "episode_title": "The Zoo: A Polar Bear in the City",
+            "release_date": "2018-04-14",
+            "tms_id": "EP026008310014",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "932914",
+            "episode_number": "7",
+            "episode_title": "The Zoo: The Eagle Has Landed",
+            "release_date": "2018-04-21",
+            "tms_id": "EP026008310020",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "932917",
+            "episode_number": "8",
+            "episode_title": "The Zoo: Miracle Cub",
+            "release_date": "2018-04-28",
+            "tms_id": "EP026008310010",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "932920",
+            "episode_number": "9",
+            "episode_title": "The Zoo: Training Dragons",
+            "release_date": "2018-05-05",
+            "tms_id": "EP026008310021",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "932923",
+            "episode_number": "10",
+            "episode_title": "The Zoo: A Gorilla with Heart",
+            "release_date": "2018-05-12",
+            "tms_id": "EP026008310022",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      },
+      {
+        "season_number": "3",
+        "season_id": "1061595",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "24.9900",
+        "purchase_cost_hd": "24.9900",
+        "episodes": [
+          {
+            "episode_id": "1061598",
+            "episode_number": "1",
+            "episode_title": "The Zoo: The Marvelous Mott Mott",
+            "release_date": "2019-02-10",
+            "tms_id": "EP026008310030",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061601",
+            "episode_number": "2",
+            "episode_title": "The Zoo: A Sea Lion Pup Grows Up",
+            "release_date": "2019-02-17",
+            "tms_id": "EP026008310026",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061604",
+            "episode_number": "3",
+            "episode_title": "The Zoo: Andre the Baby Goat",
+            "release_date": "2019-02-24",
+            "tms_id": "EP026008310027",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061607",
+            "episode_number": "4",
+            "episode_title": "The Zoo: Otter Under the Weather",
+            "release_date": "2019-03-03",
+            "tms_id": "EP026008310031",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061610",
+            "episode_number": "5",
+            "episode_title": "The Zoo: Baby Bunnies, Big World",
+            "release_date": "2019-03-10",
+            "tms_id": "EP026008310029",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061613",
+            "episode_number": "6",
+            "episode_title": "The Zoo: The Kings of Queens",
+            "release_date": "2019-03-17",
+            "tms_id": "EP026008310032",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061616",
+            "episode_number": "7",
+            "episode_title": "The Zoo: A Warthog Named Peaches",
+            "release_date": "2019-03-24",
+            "tms_id": "EP026008310034",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061619",
+            "episode_number": "8",
+            "episode_title": "The Zoo: The Great Gaur Move",
+            "release_date": "2019-03-31",
+            "tms_id": "EP026008310035",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061622",
+            "episode_number": "9",
+            "episode_title": "The Zoo: Grumpy Cats' New Digs",
+            "release_date": "2019-04-07",
+            "tms_id": "EP026008310036",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061625",
+            "episode_number": "10",
+            "episode_title": "The Zoo: Bouba's Back",
+            "release_date": "2019-04-14",
+            "tms_id": "EP026008310028",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061628",
+            "episode_number": "11",
+            "episode_title": "The Zoo: Giraffe in the City",
+            "release_date": "2019-04-21",
+            "tms_id": "EP026008310037",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061631",
+            "episode_number": "12",
+            "episode_title": "The Zoo: Taming of the Shrew",
+            "release_date": "2019-04-28",
+            "tms_id": "EP026008310038",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061634",
+            "episode_number": "13",
+            "episode_title": "The Zoo: Mending Willow",
+            "release_date": "2019-05-05",
+            "tms_id": "EP026008310039",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1061637",
+            "episode_number": "14",
+            "episode_title": "The Zoo: Snow Monkey Social",
+            "release_date": "2019-05-12",
+            "tms_id": "EP026008310040",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      },
+      {
+        "season_number": "4",
+        "season_id": "1407889",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "24.9900",
+        "purchase_cost_hd": "24.9900",
+        "episodes": [
+          {
+            "episode_id": "1407892",
+            "episode_number": "1",
+            "episode_title": "The Zoo: A New Beginning",
+            "release_date": "2020-04-04",
+            "tms_id": "EP026008310050",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407895",
+            "episode_number": "2",
+            "episode_title": "The Zoo: The Great Turtle Comeback",
+            "release_date": "2020-04-04",
+            "tms_id": "EP026008310042",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407898",
+            "episode_number": "3",
+            "episode_title": "The Zoo: Tiger's Day at the Dentist",
+            "release_date": "2020-04-11",
+            "tms_id": "EP026008310052",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407901",
+            "episode_number": "4",
+            "episode_title": "The Zoo: Beloved Bugs",
+            "release_date": "2020-04-18",
+            "tms_id": null,
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407904",
+            "episode_number": "5",
+            "episode_title": "The Zoo: Wallaby in the City",
+            "release_date": "2020-04-25",
+            "tms_id": "EP026008310057",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407907",
+            "episode_number": "6",
+            "episode_title": "The Zoo: Cougar Cub Rescue",
+            "release_date": "2020-05-02",
+            "tms_id": "EP026008310051",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407910",
+            "episode_number": "7",
+            "episode_title": "The Zoo: Velcro the Incredible",
+            "release_date": "2020-05-09",
+            "tms_id": "EP026008310041",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407913",
+            "episode_number": "8",
+            "episode_title": "The Zoo: New Chick on the Block",
+            "release_date": "2020-05-16",
+            "tms_id": "EP026008310043",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407916",
+            "episode_number": "9",
+            "episode_title": "The Zoo: Fawns Become Friends",
+            "release_date": "2020-05-23",
+            "tms_id": "EP026008310065",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407919",
+            "episode_number": "10",
+            "episode_title": "The Zoo: Porcupine Blind Date",
+            "release_date": "0202-05-30",
+            "tms_id": "EP026008310066",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407922",
+            "episode_number": "11",
+            "episode_title": "The Zoo: A Rare Egg",
+            "release_date": "2020-06-06",
+            "tms_id": "EP026008310068",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407925",
+            "episode_number": "12",
+            "episode_title": "The Zoo: Penguins In Love",
+            "release_date": "2020-06-13",
+            "tms_id": "EP026008310069",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407928",
+            "episode_number": "13",
+            "episode_title": "The Zoo: Great Snakes!",
+            "release_date": "2020-06-20",
+            "tms_id": "EP026008310070",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1407931",
+            "episode_number": "14",
+            "episode_title": "The Zoo: Wild Dogs on the Move",
+            "release_date": "2020-06-27",
+            "tms_id": "EP026008310072",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "1430076",
+            "episode_number": "105",
+            "episode_title": "The Zoo: Covid19 & Your Animals",
+            "release_date": "2020-04-25",
+            "tms_id": "EP026008310067",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "content_id": "410595",
+    "title": "Zoo Vets",
+    "release_date": "2009-01-01",
+    "rental_cost_sd": null,
+    "rental_cost_hd": null,
+    "purchase_cost_sd": "4.9900",
+    "purchase_cost_hd": "7.9900",
+    "seasons": [
+      {
+        "season_number": "1",
+        "season_id": "410596",
+        "rental_cost_sd": null,
+        "rental_cost_hd": null,
+        "purchase_cost_sd": "4.9900",
+        "purchase_cost_hd": "7.9900",
+        "episodes": [
+          {
+            "episode_id": "410600",
+            "episode_number": "1",
+            "episode_title": "Zoo Vets: Tails, Teeth and Snouts",
+            "release_date": "2010-12-05",
+            "tms_id": "EP010310720003",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "410608",
+            "episode_number": "2",
+            "episode_title": "Zoo Vets: Claws, Paws and Fins",
+            "release_date": "2010-12-07",
+            "tms_id": "EP010310720001",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          },
+          {
+            "episode_id": "410612",
+            "episode_number": "3",
+            "episode_title": "Zoo Vets: Fangs, Flippers and Tusks",
+            "release_date": "2009-10-01",
+            "tms_id": "EP010310720002",
+            "rental_cost_sd": null,
+            "rental_cost_hd": null,
+            "purchase_cost_sd": "1.9900",
+            "purchase_cost_hd": "2.9900"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "content_id": "926693",
     "title": "Zoofari",
-    "release_date": "2018-04-07",
+    "release_date": "2018-02-06",
     "rental_cost_sd": null,
     "rental_cost_hd": null,
     "purchase_cost_sd": "14.9900",
@@ -241,38 +1464,6 @@
             "episode_title": "Zoofari: Halloween Costume Party/Pre-school of Fish",
             "release_date": "2018-10-19",
             "tms_id": "EP028826890046",
-            "rental_cost_sd": null,
-            "rental_cost_hd": null,
-            "purchase_cost_sd": "1.9900",
-            "purchase_cost_hd": "2.9900"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "content_id": "2930160",
-    "title": "Grimsburg",
-    "release_date": "2024-01-07",
-    "rental_cost_sd": null,
-    "rental_cost_hd": null,
-    "purchase_cost_sd": "14.9900",
-    "purchase_cost_hd": "19.9900",
-    "seasons": [
-      {
-        "season_number": "1",
-        "season_id": "2930161",
-        "rental_cost_sd": null,
-        "rental_cost_hd": null,
-        "purchase_cost_sd": "14.9900",
-        "purchase_cost_hd": "19.9900",
-        "episodes": [
-          {
-            "episode_id": "2930164",
-            "episode_number": "1",
-            "episode_title": "Grimsburg: Pilot",
-            "release_date": "2024-01-07",
-            "tms_id": "EP043098100001",
             "rental_cost_sd": null,
             "rental_cost_hd": null,
             "purchase_cost_sd": "1.9900",

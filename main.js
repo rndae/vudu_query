@@ -1,7 +1,5 @@
 const axios = require('axios');
 const fs = require('fs');
-const { RateLimiterMemory } = require('rate-limiter-flexible');
-
 
 const baseURL = 'https://apicache.vudu.com/api2/';
 
@@ -60,6 +58,20 @@ const getData = async (url) => {
     handleError(error);
     throw error;
   }
+};
+
+const getDataWithDelay = (url, delay) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(async () => {
+      try {
+        const data = await getData(url);
+
+        resolve(data);
+      } catch (error) {
+        reject(error);
+      }
+    }, delay);
+  });
 };
 
 const getEpisodesURL = (seasonId) => {
@@ -235,12 +247,6 @@ const handleError = (error) => {
   }
 };
 
-const rateLimiter = rateLimit({
-  windowMs: 60 * 1000, // 1 minute window
-  max: 10, // limit each IP to 10 requests per windowMs
-  message: 'Too many requests. Please try again later.',
-});
-
 // To do: handle payload parameter
 const init = async (media, outputLocation) => {
   if (!media) {
@@ -261,7 +267,7 @@ const init = async (media, outputLocation) => {
   while (moreBelow) {
     const url = getURL(media, offset);
     console.log(url);
-    const data = await getData(url);
+    const data = await getDataWithDelay(url, 1000);
     const parsedData = parseDataByMedia(media, data);
     results = results.concat(parsedData);
 
@@ -299,7 +305,7 @@ const init = async (media, outputLocation) => {
       while (seasonsMoreBelow) {
         const seasonsURL = getSeasonsURL(seriesId, seasonsOffset);
         console.log("SEASONS URL: " + seasonsURL);
-        const seasonsData = await getData(seasonsURL);
+        const seasonsData = await getDataWithDelay(seasonsURL, 1000);
         const parsedSeasonsData = parseSeasonsData(seasonsData);
         seasons.push(...parsedSeasonsData);
 
@@ -322,7 +328,7 @@ const init = async (media, outputLocation) => {
         while (episodesMoreBelow) {
           const episodesURL = getEpisodesURL(seasonId, episodesOffset);
           console.log("EPISODES URL: " + episodesURL);
-          const episodesData = await getData(episodesURL);
+          const episodesData = await getDataWithDelay(episodesURL, 1000);
           const parsedEpisodesData = parseEpisodesData(episodesData);
           episodes.push(...parsedEpisodesData);
           if (episodesData.moreBelow) {
