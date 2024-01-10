@@ -75,29 +75,6 @@ const getDataWithDelay = (url) => {
   });
 };
 
-/*const getEpisodesURL = (seasonId) => {
-  if (typeof seasonId !== 'string') {
-    throw new Error('Invalid seasonId parameter. It must be a string.');
-  }
-
-  const paramsCopy = getParamsCopy();
-  paramsCopy.includePreOrders = true;
-  paramsCopy.followup = ['episodeNumberInSeason', 'seasonNumber', 'usefulStreamableOffers'];
-  paramsCopy.offset = 0;
-  paramsCopy.seasonId = seasonId;
-  paramsCopy.sortBy = 'episodeNumberInSeason';
-
-  const queryString = Object.keys(paramsCopy)
-    .map((key) => {
-      const value = Array.isArray(paramsCopy[key])
-        ? paramsCopy[key].map((v) => `${v}`).join(`&${key}=`)
-        : encodeURIComponent(paramsCopy[key]);
-      return `${encodeURIComponent(key)}=${(value)}`;
-    })
-    .join('&');
-  return `${baseURL}?${queryString}`;
-};*/
-
 const getEpisodesURL = (seasonId, offset, option) => {
   if (typeof seasonId !== 'string') {
     throw new Error('Invalid seasonId parameter. It must be a string.');
@@ -348,29 +325,6 @@ const init = async (media, outputLocation) => {
 
         let episodesOffset = 0;
         let episodesMoreBelow = true;
-
-        /*while (episodesMoreBelow) {
-          const episodesURL = getEpisodesURL(seasonId, episodesOffset);
-          console.log("EPISODES URL: " + episodesURL);
-          const episodesData = await getDataWithDelay(episodesURL);
-          try {
-            const parsedEpisodesData = parseEpisodesData(episodesData);
-            episodes.push(...parsedEpisodesData);
-          } catch (error) {
-            console.error(error.message);
-            const newEpisodesURL = getEpisodesURL(seasonId, episodesOffset, { listType: 'useful', includePreOrders: false });
-            console.log("NEW EPISODES URL: " + newEpisodesURL);
-            const newEpisodesData = await getDataWithDelay(newEpisodesURL);
-            const newParsedEpisodesData = parseEpisodesData(newEpisodesData);
-            episodes.push(...newParsedEpisodesData);
-          }
-          if (episodesData.moreBelow) {
-            episodesMoreBelow = episodesData.moreBelow[0] === 'true';
-          } else {
-            episodesMoreBelow = false;
-          }
-          episodesOffset += params.count;
-        }*/
 
         while (episodesMoreBelow) {
           const episodesURL = getEpisodesURL(seasonId, episodesOffset);
