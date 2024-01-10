@@ -2,7 +2,7 @@ const axios = require('axios');
 const fs = require('fs');
 
 const baseURL = 'https://apicache.vudu.com/api2/';
-const timeLimitPerRequestMs = 100;
+const timeLimitPerRequestMs = 10;
 
 //params need to be approached in a different way, this is a change that is critical to make
 const params = {
@@ -75,7 +75,7 @@ const getDataWithDelay = (url) => {
   });
 };
 
-const getEpisodesURL = (seasonId) => {
+/*const getEpisodesURL = (seasonId) => {
   if (typeof seasonId !== 'string') {
     throw new Error('Invalid seasonId parameter. It must be a string.');
   }
@@ -96,7 +96,30 @@ const getEpisodesURL = (seasonId) => {
     })
     .join('&');
   return `${baseURL}?${queryString}`;
+};*/
+
+const getEpisodesURL = (seasonId, offset, option) => {
+  if (typeof seasonId !== 'string') {
+    throw new Error('Invalid seasonId parameter. It must be a string.');
+  }
+
+  const paramsCopy = getParamsCopy();
+  // Merge the default parameters with the custom option
+  Object.assign(paramsCopy, option);
+  paramsCopy.offset = offset;
+  paramsCopy.seasonId = seasonId;
+
+  const queryString = Object.keys(paramsCopy)
+    .map((key) => {
+      const value = Array.isArray(paramsCopy[key])
+        ? paramsCopy[key].map((v) => `${v}`).join(`&${key}=`)
+        : encodeURIComponent(paramsCopy[key]);
+      return `${encodeURIComponent(key)}=${(value)}`;
+    })
+    .join('&');
+  return `${baseURL}?${queryString}`;
 };
+
 
 const parseMovieData = (data) => {
   if (!data || !data.content) {
@@ -159,13 +182,13 @@ const parseSeasonsData = (data) => {
   }
 
   return data.content.map((item) => {
-    const seasonNumber = item.seasonNumber[0];
+    const seasonNumber = item.seasonNumber?.[0];
     const seasonId = item.contentId[0];
 
-    const rentalCostSD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'sd')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr')[0]?.price?.[0];
-    const rentalCostHD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'hdx')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr')[0]?.price?.[0];
-    const purchaseCostSD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'sd')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'pto')[0]?.price?.[0];
-    const purchaseCostHD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'hdx')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'pto')[0]?.price?.[0];
+    const rentalCostSD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'sd')?.[0]?.offers[0]?.offer?.filter((offer) => offer.offerType[0] === 'ptr')?.[0]?.price?.[0];
+    const rentalCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'ptr')?.[0]?.price?.[0];
+    const purchaseCostSD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'sd')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'pto')?.[0]?.price?.[0];
+    const purchaseCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'pto')?.[0]?.price?.[0];
 
     return {
       season_number: seasonNumber,
@@ -184,15 +207,15 @@ const parseEpisodesData = (data) => {
   }
   return data.content.map((item) => {
     const episodeId = item.contentId[0];
-    const episodeNumber = item.episodeNumberInSeason[0];
+    const episodeNumber = item.episodeNumberInSeason?.[0];
     const episodeTitle = item.title[0];
-    const episodeReleaseDate = item.releaseTime[0];
+    const episodeReleaseDate = item.releaseTime?.[0];
     const tmsId = item.tmsId?.[0];
 
-    const rentalCostSD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'sd')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr')[0]?.price?.[0];
-    const rentalCostHD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'hdx')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'ptr')[0]?.price?.[0];
-    const purchaseCostSD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'sd')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'pto')[0]?.price?.[0];
-    const purchaseCostHD = item.contentVariants[0].contentVariant.filter((variant) => variant.videoQuality[0] === 'hdx')[0].offers[0].offer.filter((offer) => offer.offerType[0] === 'pto')[0]?.price?.[0];
+    const rentalCostSD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'sd')?.[0]?.offers[0]?.offer?.filter((offer) => offer.offerType[0] === 'ptr')?.[0]?.price?.[0];
+    const rentalCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'ptr')?.[0]?.price?.[0];
+    const purchaseCostSD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'sd')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'pto')?.[0]?.price?.[0];
+    const purchaseCostHD = item.contentVariants?.[0]?.contentVariant?.filter((variant) => variant.videoQuality[0] === 'hdx')?.[0]?.offers?.[0]?.offer?.filter((offer) => offer.offerType[0] === 'pto')?.[0]?.price?.[0];
 
     return {
       episode_id: episodeId,
@@ -261,7 +284,7 @@ const init = async (media, outputLocation) => {
   // Offset value to 0, because it works by "scrolling"
   // In 1/4/2024, for movies: greatest offset was 41700 for 100 increments
   // for series: greatest offset was 16872. The last three are after offset 16892 
-  let offset = 16892;
+  let offset = 0;
   let moreBelow = true;
   let results = [];
 
@@ -326,19 +349,59 @@ const init = async (media, outputLocation) => {
         let episodesOffset = 0;
         let episodesMoreBelow = true;
 
-        while (episodesMoreBelow) {
+        /*while (episodesMoreBelow) {
           const episodesURL = getEpisodesURL(seasonId, episodesOffset);
           console.log("EPISODES URL: " + episodesURL);
           const episodesData = await getDataWithDelay(episodesURL);
-          const parsedEpisodesData = parseEpisodesData(episodesData);
-          episodes.push(...parsedEpisodesData);
+          try {
+            const parsedEpisodesData = parseEpisodesData(episodesData);
+            episodes.push(...parsedEpisodesData);
+          } catch (error) {
+            console.error(error.message);
+            const newEpisodesURL = getEpisodesURL(seasonId, episodesOffset, { listType: 'useful', includePreOrders: false });
+            console.log("NEW EPISODES URL: " + newEpisodesURL);
+            const newEpisodesData = await getDataWithDelay(newEpisodesURL);
+            const newParsedEpisodesData = parseEpisodesData(newEpisodesData);
+            episodes.push(...newParsedEpisodesData);
+          }
           if (episodesData.moreBelow) {
             episodesMoreBelow = episodesData.moreBelow[0] === 'true';
           } else {
             episodesMoreBelow = false;
           }
           episodesOffset += params.count;
+        }*/
+
+        while (episodesMoreBelow) {
+          const episodesURL = getEpisodesURL(seasonId, episodesOffset);
+          console.log("EPISODES URL: " + episodesURL);
+          try {
+            // Try to get the episodes data
+            const episodesData = await getDataWithDelay(episodesURL);
+            try {
+              const parsedEpisodesData = parseEpisodesData(episodesData);
+              episodes.push(...parsedEpisodesData);
+            } catch (error) {
+              console.error(error.message);
+              const newEpisodesURL = getEpisodesURL(seasonId, episodesOffset, { listType: 'useful', includePreOrders: false });
+              console.log("NEW EPISODES URL: " + newEpisodesURL);
+              const newEpisodesData = await getDataWithDelay(newEpisodesURL);
+              const newParsedEpisodesData = parseEpisodesData(newEpisodesData);
+              episodes.push(...newParsedEpisodesData);
+            }
+            if (episodesData.moreBelow) {
+              episodesMoreBelow = episodesData.moreBelow[0] === 'true';
+            } else {
+              episodesMoreBelow = false;
+            }
+            episodesOffset += params.count;
+          } catch (error) {
+            console.error(error.message);
+            console.log('No episodes to show for seasonId: ' + seasonId);
+            break;            
+          }
         }
+        
         seasons[j].episodes = episodes;
       }
       results[i].seasons = seasons;
