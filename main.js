@@ -1,6 +1,7 @@
 const axios = require('axios');
-const rateLimit = require('express-rate-limit');
 const fs = require('fs');
+const { RateLimiterMemory } = require('rate-limiter-flexible');
+
 
 const baseURL = 'https://apicache.vudu.com/api2/';
 
@@ -164,15 +165,12 @@ const parseSeasonsData = (data) => {
   });
 };
 
-// Define a function to parse the episodes data and extract the relevant fields
 const parseEpisodesData = (data) => {
   if (!data || !data.content) {
     throw new Error('Invalid data. It must have the episode property.');
   }
-
   return data.content.map((item) => {
     const episodeId = item.contentId[0];
-    //const episodeNumber = episode.episodeId[0].split('-')[2];
     const episodeNumber = item.episodeNumberInSeason[0];
     const episodeTitle = item.title[0];
     const episodeReleaseDate = item.releaseTime[0];
