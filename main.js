@@ -249,7 +249,7 @@ const handleError = (error) => {
 };
 
 // To do: handle payload parameter
-const init = async (media, outputLocation) => {
+const Init = async (media, outputLocation, payload) => {
   if (!media) {
     throw new Error('Invalid media parameter. It must be either movies or series.');
   }
@@ -261,7 +261,7 @@ const init = async (media, outputLocation) => {
   // Offset value to 0, because it works by "scrolling"
   // In 1/4/2024, for movies: greatest offset was 41700 for 100 increments
   // for series: greatest offset was 16872. The last three are after offset 16892 
-  let offset = 0;
+  let offset = 41800;
   let moreBelow = true;
   let results = [];
 
@@ -397,11 +397,9 @@ const getSeasonsURL = (seriesId) => {
   return `${baseURL}?${queryString}`;
 };
 
-// Parses the command line arguments and calls the init function
 const main = async () => {
   const args = process.argv.slice(2);
-
-  console.log("Running with parameters: " + args);
+  console.log('Running with parameters: ', args);
 
   if (args.length < 2) {
     throw new Error('Invalid arguments. You must provide the media and output parameters.');
@@ -409,10 +407,11 @@ const main = async () => {
 
   const media = JSON.parse(args[0]).media;
   const outputLocation = args[1];
-
-  const results = await init(media, outputLocation);
+  const payload = args[2] || '';
+  const results = await Init(media, outputLocation, payload);
 
   console.log(results);
 };
+
 
 main();
