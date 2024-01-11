@@ -1,50 +1,5 @@
 [
   {
-    "content_id": "2640105",
-    "title": "Zombies 3",
-    "release_date": "2022-07-15",
-    "rental_cost_sd": null,
-    "rental_cost_hd": null,
-    "purchase_cost_sd": "7.9900",
-    "purchase_cost_hd": "9.9900"
-  },
-  {
-    "content_id": "923385",
-    "title": "Zombies Have Fallen",
-    "release_date": "2018-01-12",
-    "rental_cost_sd": "2.9900",
-    "rental_cost_hd": "3.9900",
-    "purchase_cost_sd": "9.9900",
-    "purchase_cost_hd": "14.9900"
-  },
-  {
-    "content_id": "1794656",
-    "title": "Zombies of the Living Dead",
-    "release_date": "2015-01-01",
-    "rental_cost_sd": "1.9900",
-    "rental_cost_hd": "2.9900",
-    "purchase_cost_sd": "6.9900",
-    "purchase_cost_hd": "8.9900"
-  },
-  {
-    "content_id": "2575713",
-    "title": "Zombies: The Beginning",
-    "release_date": "2007-01-01",
-    "rental_cost_sd": "2.9900",
-    "rental_cost_hd": "3.9900",
-    "purchase_cost_sd": "5.9900",
-    "purchase_cost_hd": "7.9900"
-  },
-  {
-    "content_id": "647477",
-    "title": "Zombieworld",
-    "release_date": "2015-02-24",
-    "rental_cost_sd": "2.9900",
-    "rental_cost_hd": "3.9900",
-    "purchase_cost_sd": "12.9900",
-    "purchase_cost_hd": "13.9900"
-  },
-  {
     "content_id": "1199624",
     "title": "Zombillenium",
     "release_date": "2019-08-27",

@@ -56,7 +56,7 @@ exports.Init = async (media, payload, outputLocation) => {
     const seriesIds = new Set();
 
     for (let i = 0; i < results.length; i++) {
-      //const seriesId = results[i].series_id;
+      // series_id is the same as content_id in the original data
       const seriesId = results[i].content_id;
 
 
@@ -113,7 +113,6 @@ exports.Init = async (media, payload, outputLocation) => {
       results[i].seasons = seasons;
     }
   }
-
   saveData(results, outputLocation);
   return results;
 };
@@ -172,7 +171,7 @@ const getData = async (url) => {
 
     return JSON.parse(strippedData);
   } catch (error) {
-    handleError(error);
+    handleServerRequestError(error);
     throw error;
   }
 };
@@ -189,6 +188,32 @@ const getDataWithDelay = (url) => {
       }
     }, timeLimitPerRequestMs);
   });
+};
+
+const getSeasonsURL = (seriesId) => {
+  if (typeof seriesId !== 'string') {
+    throw new Error('Invalid seriesId parameter. It must be a string.');
+  }
+
+  const paramsCopy = getParamsCopy();
+
+  paramsCopy.type = ['season'];
+  paramsCopy.superType = 'tv';
+  paramsCopy.includePreOrders = true;
+  paramsCopy.followup = ['episodeNumberInSeason', 'seasonNumber', 'usefulStreamableOffers'];
+  paramsCopy.offset = 0;
+  paramsCopy.seriesId = seriesId;
+
+  const queryString = Object.keys(paramsCopy)
+    .map((key) => {
+      const value = Array.isArray(paramsCopy[key])
+        ? paramsCopy[key].map((v) => `${v}`).join(`&${key}=`)
+        : encodeURIComponent(paramsCopy[key]);
+      return `${encodeURIComponent(key)}=${value}`;
+    })
+    .join('&');
+
+  return `${baseURL}?${queryString}`;
 };
 
 const getEpisodesURL = (seasonId, offset, option) => {
@@ -212,7 +237,6 @@ const getEpisodesURL = (seasonId, offset, option) => {
     .join('&');
   return `${baseURL}?${queryString}`;
 };
-
 
 const parseMovieData = (data) => {
   if (!data || !data.content) {
@@ -347,8 +371,7 @@ const saveData = (data, outputLocation) => {
   fs.writeFileSync(outputLocation + "out.json", jsonString);
 };
 
-
-const handleError = (error) => {
+const handleServerRequestError = (error) => {
   if (error.response) {
     console.error('Error response from the server:');
     console.error(error.response.data);
@@ -363,151 +386,7 @@ const handleError = (error) => {
   }
 };
 
-// To do: handle payload parameter
-const Init = async (media, payload, outputLocation) => {
-  if (!media) {
-    throw new Error('Invalid media parameter. It must be either movies or series.');
-  }
-
-  if (!outputLocation) {
-    throw new Error('Invalid outputLocation parameter. It must be a valid path.');
-  }
-
-  // Offset value to 0, because it works by "scrolling"
-  // In 1/11/2024, for movies: greatest offset was 41800 for 100 increments
-  // for series: greatest offset was 16872. The last three are after offset 16892 
-  let offset = 16892;
-  let moreBelow = true;
-  let results = [];
-
-  while (moreBelow) {
-    const url = getURL(media, offset);
-    console.log(url);
-    const data = await getDataWithDelay(url);
-    const parsedData = parseDataByMedia(media, data);
-    results = results.concat(parsedData);
-
-    if (data.moreBelow) {
-      moreBelow = data.moreBelow[0] === 'true';
-    } else {
-      moreBelow = false;
-    }
-
-    offset += params.count;
-  }
-
-  results = results.filter(
-    (item, index, array) =>
-      array.findIndex((other) => other.content_id === item.content_id) === index
-  );
-
-  if (media === 'series') {
-    const seriesIds = new Set();
-
-    for (let i = 0; i < results.length; i++) {
-      //const seriesId = results[i].series_id;
-      const seriesId = results[i].content_id;
-
-
-      if (seriesIds.has(seriesId)) {
-        continue;
-      }
-
-      seriesIds.add(seriesId);
-      const seasons = [];
-      let seasonsOffset = 0;
-      let seasonsMoreBelow = true;
-
-      while (seasonsMoreBelow) {
-        const seasonsURL = getSeasonsURL(seriesId, seasonsOffset);
-        console.log("SEASONS URL: " + seasonsURL);
-        const seasonsData = await getDataWithDelay(seasonsURL);
-        const parsedSeasonsData = parseSeasonsData(seasonsData);
-        seasons.push(...parsedSeasonsData);
-
-        if (seasonsData.moreBelow) {
-          seasonsMoreBelow = seasonsData.moreBelow[0] === 'true';
-        } else {
-          seasonsMoreBelow = false;
-        }
-
-        seasonsOffset += params.count;
-      }
-
-      for (let j = 0; j < seasons.length; j++) {
-        const seasonId = seasons[j].season_id;
-        const episodes = [];
-
-        let episodesOffset = 0;
-        let episodesMoreBelow = true;
-
-        while (episodesMoreBelow) {
-          const episodesURL = getEpisodesURL(seasonId, episodesOffset);
-          console.log("EPISODES URL: " + episodesURL);
-          try {
-            // Try to get the episodes data
-            const episodesData = await getDataWithDelay(episodesURL);
-            try {
-              const parsedEpisodesData = parseEpisodesData(episodesData);
-              episodes.push(...parsedEpisodesData);
-            } catch (error) {
-              console.error(error.message);
-              const newEpisodesURL = getEpisodesURL(seasonId, episodesOffset, { listType: 'useful', includePreOrders: false });
-              console.log("NEW EPISODES URL: " + newEpisodesURL);
-              const newEpisodesData = await getDataWithDelay(newEpisodesURL);
-              const newParsedEpisodesData = parseEpisodesData(newEpisodesData);
-              episodes.push(...newParsedEpisodesData);
-            }
-            if (episodesData.moreBelow) {
-              episodesMoreBelow = episodesData.moreBelow[0] === 'true';
-            } else {
-              episodesMoreBelow = false;
-            }
-            episodesOffset += params.count;
-          } catch (error) {
-            console.error(error.message);
-            console.log('No episodes to show for seasonId: ' + seasonId);
-            break;            
-          }
-        }
-        
-        seasons[j].episodes = episodes;
-      }
-      results[i].seasons = seasons;
-    }
-  }
-
-  saveData(results, outputLocation);
-  return results;
-}; 
-
 const getParamsCopy = () => {
   const paramsCopy = { ...params };
   return paramsCopy;
-};
-
-const getSeasonsURL = (seriesId) => {
-  if (typeof seriesId !== 'string') {
-    throw new Error('Invalid seriesId parameter. It must be a string.');
-  }
-
-  const paramsCopy = getParamsCopy();
-
-  paramsCopy.type = ['season'];
-  paramsCopy.superType = 'tv';
-  paramsCopy.includePreOrders = true;
-  paramsCopy.followup = ['episodeNumberInSeason', 'seasonNumber', 'usefulStreamableOffers'];
-  paramsCopy.offset = 0;
-  paramsCopy.seriesId = seriesId;
-
-  const queryString = Object.keys(paramsCopy)
-    .map((key) => {
-      const value = Array.isArray(paramsCopy[key])
-        ? paramsCopy[key].map((v) => `${v}`).join(`&${key}=`)
-        : encodeURIComponent(paramsCopy[key]);
-      return `${encodeURIComponent(key)}=${value}`;
-    })
-    .join('&');
-
-  return `${baseURL}?${queryString}`;
 };
