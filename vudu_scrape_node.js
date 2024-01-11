@@ -27,7 +27,7 @@ exports.Init = async (media, payload, outputLocation) => {
   // Offset value to 0, because it works by "scrolling"
   // In 1/4/2024, for movies: greatest offset was 41800 for 100 increments
   // for series: greatest offset was 16872. The last three are after offset 16892 
-  let offset = 16872;
+  let offset = 0;
   let moreBelow = true;
   let results = [];
 
